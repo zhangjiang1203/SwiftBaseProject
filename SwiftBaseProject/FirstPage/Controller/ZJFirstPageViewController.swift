@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class ZJFirstPageViewController: ZJBaseViewController {
 
@@ -14,6 +15,10 @@ class ZJFirstPageViewController: ZJBaseViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "首页"
+        
+        //初始化网络请求
+        let provider = MoyaProvider<RequestModel>.init()
+        
     }
     
 
