@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		288259411F30174B00032B16 /* ZJRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288259401F30174B00032B16 /* ZJRequestTool.swift */; };
+		28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */; };
 		2888B10A1F2EC1940082E7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1091F2EC1940082E7D0 /* AppDelegate.swift */; };
 		2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2888B1101F2EC1940082E7D0 /* Assets.xcassets */; };
 		2888B1221F2EC3200082E7D0 /* ZJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1211F2EC3200082E7D0 /* ZJBaseViewController.swift */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		288259401F30174B00032B16 /* ZJRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJRequestTool.swift; sourceTree = "<group>"; };
+		28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAFRequestTool.swift; sourceTree = "<group>"; };
 		2888B1061F2EC1940082E7D0 /* SwiftBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2888B1091F2EC1940082E7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2888B1101F2EC1940082E7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		2872E9A51F2F2EC10004984F /* SwiftTools */ = {
 			isa = PBXGroup;
 			children = (
-				288259401F30174B00032B16 /* ZJRequestTool.swift */,
+				28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */,
 			);
 			path = SwiftTools;
 			sourceTree = "<group>";
@@ -415,8 +415,8 @@
 				2888B1221F2EC3200082E7D0 /* ZJBaseViewController.swift in Sources */,
 				2888B13B1F2EC4D40082E7D0 /* ZJForthPageViewController.swift in Sources */,
 				2888B12C1F2EC3F80082E7D0 /* ZJTabBarView.swift in Sources */,
+				28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */,
 				2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */,
-				288259411F30174B00032B16 /* ZJRequestTool.swift in Sources */,
 				2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */,
 				2888B1471F2EC5120082E7D0 /* ZJFirstPageViewController.swift in Sources */,
 				2888B1261F2EC3540082E7D0 /* ZJBaseTabBarViewController.swift in Sources */,
