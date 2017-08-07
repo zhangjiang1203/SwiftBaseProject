@@ -47,7 +47,7 @@ class ZJFirstPageViewController: ZJBaseViewController {
         viewManager = ZJFirstPageManager.init()
         viewManager.showTableView = myTableView
         
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "systemCell")
+        myTableView.register(UINib.init(nibName: "ZJFirstPageCell", bundle: nil), forCellReuseIdentifier: "ZJFirstPageCell")
         myTableView.delegate = viewManager
         myTableView.dataSource = viewManager
         

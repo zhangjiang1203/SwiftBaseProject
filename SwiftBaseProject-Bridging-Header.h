@@ -13,6 +13,7 @@
 #import "UIImageView+CornerRadius.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 #endif /* SwiftBaseProject_Bridging_Header_h */

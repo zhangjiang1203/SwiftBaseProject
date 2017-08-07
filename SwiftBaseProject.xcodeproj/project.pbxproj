@@ -64,7 +64,7 @@
 		28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageManager.swift; sourceTree = "<group>"; };
 		28AECA8E1F380B75000A257D /* ZJFirstPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageCell.swift; sourceTree = "<group>"; };
 		28AECA8F1F380B75000A257D /* ZJFirstPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFirstPageCell.xib; sourceTree = "<group>"; };
-		28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftBaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftBaseProject-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		28AECA941F385280000A257D /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
 		28AECA951F385280000A257D /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		28AECA981F385697000A257D /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -100,7 +100,6 @@
 		2888B0FD1F2EC1940082E7D0 = {
 			isa = PBXGroup;
 			children = (
-				28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */,
 				2888B1081F2EC1940082E7D0 /* SwiftBaseProject */,
 				2888B1071F2EC1940082E7D0 /* Products */,
 				F9D550D28564C94A863B0C07 /* Pods */,
@@ -129,6 +128,7 @@
 				2888B1491F2EC55F0082E7D0 /* AppDelegateCategory */,
 				2888B1091F2EC1940082E7D0 /* AppDelegate.swift */,
 				2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */,
+				28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */,
 				2888B1101F2EC1940082E7D0 /* Assets.xcassets */,
 				2888B1151F2EC1940082E7D0 /* Info.plist */,
 			);

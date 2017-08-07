@@ -40,7 +40,6 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
         ZJAFRequestTool.getRequest(urlString: "http://api.budejie.com/api/api_open.php?a=list&c=data", params: ["type":infoType], success: { (result) in
             if let model = JSONDeserializer<ZJRequestTestModel>.deserializeFrom(dict: result as? NSDictionary){
                 MBProgressHUD.hide(for: self.showTableView.superview!, animated: true)
-                print("获取到的数据\(String(describing: model.info?.maxtime))")
                 self.segmentTitleArr = model.list!
             }
         }) { (errorStr) in
@@ -54,10 +53,14 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "systemCell", for: indexPath)
-        cell.textLabel?.text = segmentTitleArr[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ZJFirstPageCell", for: indexPath) as! ZJFirstPageCell
+        cell.listData = segmentTitleArr[indexPath.row]
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ZJFirstPageCell: UITableViewCell {
 
@@ -40,6 +41,14 @@ class ZJFirstPageCell: UITableViewCell {
     
     //开始设置显示的数据信息
     func setMyListShowData()  {
-        
+        self.userHeaderImage.sd_setImage(with: URL.init(string: listData.profile_image!), placeholderImage: UIImage.init(named: ""))
+        self.userNameLabel.text = listData.name
+        self.detailContentLabel.text = listData.text
+        self.infoImageView.sd_setImage(with: URL.init(string: listData.profile_image!), placeholderImage: UIImage.init(named: ""))
+        let tempDate:Array<String> = [listData.love!,listData.hate!,listData.comment!,listData.repost!]
+        for i in 1...tempDate.count {
+            let button:UIButton = self.viewWithTag(i) as! UIButton
+            button.setTitle(tempDate[i-1], for: .normal)
+        }
     }
 }
