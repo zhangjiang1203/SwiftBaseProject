@@ -12,7 +12,7 @@ class ZJBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addFlurBackImage()
+
     }
     
     func addFlurBackImage()  {
