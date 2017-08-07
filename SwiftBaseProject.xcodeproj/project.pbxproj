@@ -33,6 +33,7 @@
 		28AECA961F385280000A257D /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA951F385280000A257D /* UIImageView+CornerRadius.m */; };
 		28AECA9B1F385697000A257D /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA991F385697000A257D /* MBProgressHUD+Add.m */; };
 		28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 28AECA9A1F385697000A257D /* MBProgressHUD.bundle */; };
+		28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA9E1F3859A3000A257D /* MBProgressHUD.m */; };
 		FBA49481C99E7969E23F282A /* Pods_SwiftBaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		28AECA981F385697000A257D /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		28AECA991F385697000A257D /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		28AECA9A1F385697000A257D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		28AECA9D1F3859A3000A257D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		28AECA9E1F3859A3000A257D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3F274E8A89CB192340B412D /* Pods-SwiftBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BE897518B2A3280EF782F1F9 /* Pods-SwiftBaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +313,8 @@
 		28AECA971F385697000A257D /* MBProgressHUD+Add */ = {
 			isa = PBXGroup;
 			children = (
+				28AECA9D1F3859A3000A257D /* MBProgressHUD.h */,
+				28AECA9E1F3859A3000A257D /* MBProgressHUD.m */,
 				28AECA981F385697000A257D /* MBProgressHUD+Add.h */,
 				28AECA991F385697000A257D /* MBProgressHUD+Add.m */,
 				28AECA9A1F385697000A257D /* MBProgressHUD.bundle */,
@@ -470,6 +475,7 @@
 				2888B12C1F2EC3F80082E7D0 /* ZJTabBarView.swift in Sources */,
 				28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */,
 				2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */,
+				28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */,
 				2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */,
 				28AECA8D1F380278000A257D /* ZJFirstPageManager.swift in Sources */,
 				2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */,

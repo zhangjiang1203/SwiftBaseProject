@@ -15,7 +15,6 @@ target 'SwiftBaseProject' do
   
   #下面是OC的类库  swift直接引用
   #pod 'ZYCornerRadius', '~> 1.0.2'#设置图片圆角和任意角多的类库
-  pod 'MBProgressHUD'
   pod 'MJRefresh', '~> 3.1.12'
-
+  pod 'SDWebImage', '~> 4.0.0'
 end

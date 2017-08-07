@@ -11,7 +11,7 @@
 
 
 #import "UIImageView+CornerRadius.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
 
 

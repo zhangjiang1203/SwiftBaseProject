@@ -39,6 +39,7 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
     func addAlamofireNetTest()   {
         ZJAFRequestTool.getRequest(urlString: "http://api.budejie.com/api/api_open.php?a=list&c=data", params: ["type":infoType], success: { (result) in
             if let model = JSONDeserializer<ZJRequestTestModel>.deserializeFrom(dict: result as? NSDictionary){
+                MBProgressHUD.hide(for: self.showTableView.superview!, animated: true)
                 print("获取到的数据\(String(describing: model.info?.maxtime))")
                 self.segmentTitleArr = model.list!
             }

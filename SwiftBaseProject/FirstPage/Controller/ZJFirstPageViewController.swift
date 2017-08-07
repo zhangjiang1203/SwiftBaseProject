@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
 import ReactiveSwift
 import Result
+
+
 
 class ZJFirstPageViewController: ZJBaseViewController {
 
@@ -67,6 +68,7 @@ class ZJFirstPageViewController: ZJBaseViewController {
             default:
                 break;
             }
+            MBProgressHUD.showAdded(to: self.view, animated: true)
             self.viewManager.infoType = infoType
         }
         segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
