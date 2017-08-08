@@ -51,10 +51,10 @@ class ZJFirstPageCell: UITableViewCell {
         }else{
             infoImageCons.constant = 0
         }
-        let tempDate:Array<String> = [listData.love!,listData.hate!,listData.comment!,listData.repost!]
+        let tempDate:Array<String> = [listData.love!,listData.hate!,listData.repost!,listData.comment!]
         for i in 1...tempDate.count {
             let button:UIButton = self.viewWithTag(i) as! UIButton
-            button.setTitle(tempDate[i-1], for: .normal)
+            button.setTitle(String.init(format: " %@", tempDate[i-1]) , for: .normal)
         }
 
     }
