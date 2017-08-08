@@ -260,6 +260,40 @@ const char kProcessedImage;
 }
 
 
+-(void)setImageFitWithImageView{
+    
+    [self setContentScaleFactor:[[UIScreen mainScreen] scale]];
+    self.contentMode =  UIViewContentModeScaleAspectFill;
+    self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.clipsToBounds  = YES;
+}
+
+
+@end
+
+
+@implementation NSString (Height)
+
+
+//计算并绘制字符串文本的高度
+-(CGFloat)getSuitSizeWithFontSize:(float)fontSize bold:(BOOL)bold sizeOfX:(float)x
+{
+    UIFont *font ;
+    if (bold) {
+        font = [UIFont boldSystemFontOfSize:fontSize];
+    }else{
+        font = [UIFont systemFontOfSize:fontSize];
+    }
+    
+    CGSize constraint = CGSizeMake(x, MAXFLOAT);
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+    // 返回文本绘制所占据的矩形空间。
+    CGSize contentSize = [self boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    return contentSize.height;
+}
+
+
+
 @end
 
 

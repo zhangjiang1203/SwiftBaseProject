@@ -20,6 +20,7 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
     var segmentTitleArr:Array<List> = []{
         didSet{
            showTableView.reloadData()
+           showTableView.scrollToRow(at: NSIndexPath.init(row: 0, section: 0) as IndexPath, at: .top, animated: false)
         }
     }
     
@@ -41,6 +42,7 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
             if let model = JSONDeserializer<ZJRequestTestModel>.deserializeFrom(dict: result as? NSDictionary){
                 MBProgressHUD.hide(for: self.showTableView.superview!, animated: true)
                 self.segmentTitleArr = model.list!
+                
             }
         }) { (errorStr) in
             print("错误信息===\(errorStr)")
@@ -54,13 +56,14 @@ class ZJFirstPageManager: NSObject,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ZJFirstPageCell", for: indexPath) as! ZJFirstPageCell
+        cell.selectionStyle = .none
         cell.listData = segmentTitleArr[indexPath.row]
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 310
+        return segmentTitleArr[indexPath.row].cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

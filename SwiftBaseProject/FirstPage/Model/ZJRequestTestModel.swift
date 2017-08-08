@@ -37,7 +37,7 @@ class Info: HandyJSON {
 }
 
 class List: HandyJSON {
-
+    //段子信息
     var cache_version: Int = 0
 
     var created_at: String?
@@ -112,6 +112,42 @@ class List: HandyJSON {
 
     var width: String?
     
+    //图片的另外的值
+    var is_gif: String?
+    
+    var image2: String?
+    
+    var image1: String?
+    
+    var image0: String?
+    
+    var cdn_img: String?
+    
+    //视频
+    var playfcount: String?
+    
+    var playcount: String?
+    
+    //声音
+    var image_small: String?
+    
+    //计算cell显示的高度
+    var cellHeight:CGFloat{
+        get{
+            let tempStr = self.text! as NSString
+            let textHeight = tempStr.getSuitSize(withFontSize: 15, bold: false, sizeOfX: Float(KScreenWidth-30))
+        
+            var imageHeight:CGFloat = 0
+            if self.image0 != nil {
+                imageHeight = 160
+            }else{
+                imageHeight = 0
+            }
+            return textHeight + imageHeight + 130;
+        }
+    }
+    
+
     required init() {
         
     }

@@ -18,8 +18,23 @@
 
 - (instancetype)initWithRoundingRectImageView;
 
+/**
+ 设置图片圆角
+ */
 - (void)zy_cornerRadiusRoundingRect;
 
 - (void)zy_attachBorderWidth:(CGFloat)width color:(UIColor *)color;
+
+/**
+ 设置图片自适应
+ */
+-(void)setImageFitWithImageView;
+
+@end
+
+
+@interface NSString (Height)
+
+-(CGFloat)getSuitSizeWithFontSize:(float)fontSize bold:(BOOL)bold sizeOfX:(float)x;
 
 @end

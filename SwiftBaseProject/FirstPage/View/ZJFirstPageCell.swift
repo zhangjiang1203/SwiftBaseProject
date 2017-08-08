@@ -31,7 +31,7 @@ class ZJFirstPageCell: UITableViewCell {
         super.awakeFromNib()
         
         userHeaderImage.zy_cornerRadiusRoundingRect()
-        
+        infoImageView.setImageFitWithImageView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,14 +41,21 @@ class ZJFirstPageCell: UITableViewCell {
     
     //开始设置显示的数据信息
     func setMyListShowData()  {
-        self.userHeaderImage.sd_setImage(with: URL.init(string: listData.profile_image!), placeholderImage: UIImage.init(named: ""))
+        self.userHeaderImage.sd_setImage(with: URL.init(string: listData.profile_image!), placeholderImage: UIImage.init(named: "defaultUserheader"))
         self.userNameLabel.text = listData.name
         self.detailContentLabel.text = listData.text
-        self.infoImageView.sd_setImage(with: URL.init(string: listData.profile_image!), placeholderImage: UIImage.init(named: ""))
+        
+        if listData.image0 != nil {
+            self.infoImageView.sd_setImage(with: URL.init(string:listData.image0!), placeholderImage: UIImage.init(named: ""))
+            infoImageCons.constant = 160
+        }else{
+            infoImageCons.constant = 0
+        }
         let tempDate:Array<String> = [listData.love!,listData.hate!,listData.comment!,listData.repost!]
         for i in 1...tempDate.count {
             let button:UIButton = self.viewWithTag(i) as! UIButton
             button.setTitle(tempDate[i-1], for: .normal)
         }
+
     }
 }

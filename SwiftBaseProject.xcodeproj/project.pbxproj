@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280954341F394C2600CED268 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280954331F394C2600CED268 /* String+Height.swift */; };
 		28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */; };
 		2888B10A1F2EC1940082E7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1091F2EC1940082E7D0 /* AppDelegate.swift */; };
 		2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2888B1101F2EC1940082E7D0 /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		2888B1481F2EC5120082E7D0 /* ZJFirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2888B1461F2EC5120082E7D0 /* ZJFirstPageViewController.xib */; };
 		2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B14A1F2EC7130082E7D0 /* AppDelegateCategory.swift */; };
 		2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */; };
-		2897B4991F340626001FA611 /* ZJFirstPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B4981F340626001FA611 /* ZJFirstPageModel.swift */; };
 		2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */; };
 		2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */; };
 		28AECA8D1F380278000A257D /* ZJFirstPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */; };
@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		280954331F394C2600CED268 /* String+Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAFRequestTool.swift; sourceTree = "<group>"; };
 		2888B1061F2EC1940082E7D0 /* SwiftBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2888B1091F2EC1940082E7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		2888B1461F2EC5120082E7D0 /* ZJFirstPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFirstPageViewController.xib; sourceTree = "<group>"; };
 		2888B14A1F2EC7130082E7D0 /* AppDelegateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateCategory.swift; sourceTree = "<group>"; };
 		2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publicDefineMethod.swift; sourceTree = "<group>"; };
-		2897B4981F340626001FA611 /* ZJFirstPageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageModel.swift; sourceTree = "<group>"; };
 		2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJRequestTestModel.swift; sourceTree = "<group>"; };
 		2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSegmentScrollView.swift; sourceTree = "<group>"; };
 		28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageManager.swift; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */,
+				280954331F394C2600CED268 /* String+Height.swift */,
 			);
 			name = SwiftRequestTools;
 			path = SwiftTools;
@@ -244,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */,
-				2897B4981F340626001FA611 /* ZJFirstPageModel.swift */,
 				2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */,
 			);
 			path = Model;
@@ -477,12 +477,12 @@
 				2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */,
 				28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */,
 				2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */,
+				280954341F394C2600CED268 /* String+Height.swift in Sources */,
 				28AECA8D1F380278000A257D /* ZJFirstPageManager.swift in Sources */,
 				2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */,
 				2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */,
 				2888B1471F2EC5120082E7D0 /* ZJFirstPageViewController.swift in Sources */,
 				2888B1261F2EC3540082E7D0 /* ZJBaseTabBarViewController.swift in Sources */,
-				2897B4991F340626001FA611 /* ZJFirstPageModel.swift in Sources */,
 				2888B13F1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift in Sources */,
 				2888B10A1F2EC1940082E7D0 /* AppDelegate.swift in Sources */,
 				2888B1431F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift in Sources */,

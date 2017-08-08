@@ -54,7 +54,6 @@ class ZJFirstPageViewController: ZJBaseViewController {
         let segmentView = ZJSegmentScrollView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: 40))
         segmentView.selectedColor = RGBCOLOR_HEX(h: 0x00c866)
         segmentView.scrollClouse = {(index) in
-            print("index====\(index)")
             var infoType = 0
             switch index {
             case 0:
@@ -70,6 +69,7 @@ class ZJFirstPageViewController: ZJBaseViewController {
             }
             MBProgressHUD.showAdded(to: self.view, animated: true)
             self.viewManager.infoType = infoType
+            
         }
         segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
         self.view.addSubview(segmentView)
