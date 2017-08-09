@@ -25,23 +25,6 @@ class ZJFirstPageViewController: ZJBaseViewController {
         
     }
     
-
-    func SwiftRACTest()  {
-        
-        let (signalA ,observerA) = Signal<String,NoError>.pipe()
-        let (signalB ,observerB) = Signal<String,NoError>.pipe()
-        
-        Signal.combineLatest(signalA,signalB).observeValues { (values) in
-            print("收到的值\(values.0)+\(values.1)")
-        }
-        
-        observerA.send(value: "1")
-        observerA.sendCompleted()
-        
-        observerB.send(value: "2")
-        observerB.sendCompleted()
-    }
-    
     func addMySegmentInit()  {
         
         viewManager = ZJFirstPageManager.init()
@@ -51,6 +34,25 @@ class ZJFirstPageViewController: ZJBaseViewController {
         myTableView.delegate = viewManager
         myTableView.dataSource = viewManager
         
+        //设置刷新
+        var images:Array<UIImage> = []
+        for i in 1...4 {
+            images.append(UIImage.init(named: "bdj_mj_refresh_\(i)")!)
+        }
+        let gifHeader = MJRefreshGifHeader()
+        gifHeader.setImages(images, for: .idle)
+        gifHeader.setImages(images, for: .pulling)
+        gifHeader.setImages(images, for: .refreshing)
+        
+        gifHeader.setRefreshingTarget(self, refreshingAction: #selector(beginRefresh))
+        
+        myTableView.mj_header = gifHeader
+
+        myTableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
+            self.myTableView.mj_footer.endRefreshing()
+        })
+        
+        //设置分段器
         let segmentView = ZJSegmentScrollView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: 40))
         segmentView.selectedColor = RGBCOLOR_HEX(h: 0x00c866)
         segmentView.scrollClouse = {(index) in
@@ -73,6 +75,11 @@ class ZJFirstPageViewController: ZJBaseViewController {
         }
         segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
         self.view.addSubview(segmentView)
+    }
+    
+    /// 开始刷新
+    func beginRefresh() {
+        myTableView.mj_header.endRefreshing()
     }
     
 }
