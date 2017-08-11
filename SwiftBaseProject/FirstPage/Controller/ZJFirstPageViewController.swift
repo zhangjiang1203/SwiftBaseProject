@@ -10,8 +10,6 @@ import UIKit
 import ReactiveSwift
 import Result
 
-
-
 class ZJFirstPageViewController: ZJBaseViewController {
 
     @IBOutlet weak var myTableView: UITableView!
@@ -34,7 +32,7 @@ class ZJFirstPageViewController: ZJBaseViewController {
         myTableView.delegate = viewManager
         myTableView.dataSource = viewManager
         
-        //设置刷新
+        //设置头部和底部刷新
         var images:Array<UIImage> = []
         for i in 1...4 {
             images.append(UIImage.init(named: "bdj_mj_refresh_\(i)")!)
@@ -43,13 +41,11 @@ class ZJFirstPageViewController: ZJBaseViewController {
         gifHeader.setImages(images, for: .idle)
         gifHeader.setImages(images, for: .pulling)
         gifHeader.setImages(images, for: .refreshing)
-        
         gifHeader.setRefreshingTarget(self, refreshingAction: #selector(beginRefresh))
-        
         myTableView.mj_header = gifHeader
 
         myTableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
-            self.myTableView.mj_footer.endRefreshing()
+            self.viewManager.addAlamofireNetTest(isRefresh: false)
         })
         
         //设置分段器
@@ -71,7 +67,6 @@ class ZJFirstPageViewController: ZJBaseViewController {
             }
             MBProgressHUD.showAdded(to: self.view, animated: true)
             self.viewManager.infoType = infoType
-            
         }
         segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
         self.view.addSubview(segmentView)
@@ -79,7 +74,7 @@ class ZJFirstPageViewController: ZJBaseViewController {
     
     /// 开始刷新
     func beginRefresh() {
-        myTableView.mj_header.endRefreshing()
+        viewManager.addAlamofireNetTest(isRefresh: true)
     }
     
 }

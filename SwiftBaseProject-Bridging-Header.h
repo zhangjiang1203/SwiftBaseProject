@@ -15,7 +15,7 @@
 #import "MBProgressHUD+Add.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MJRefresh.h"
-
+#import "iCarousel.h"
 
 
 

@@ -2,7 +2,6 @@ PODS:
   - Alamofire (4.5.0)
   - HandyJSON (1.7.2)
   - Hero (0.3.6)
-  - iCarousel (1.8.3)
   - Kingfisher (3.10.4)
   - ReactiveCocoa (6.0.0):
     - ReactiveSwift (~> 2.0)
@@ -18,7 +17,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.5.0)
   - HandyJSON (~> 1.7.1)
   - Hero (~> 0.3.6)
-  - iCarousel (~> 1.8.3)
   - Kingfisher (~> 3.10.2)
   - ReactiveCocoa (~> 6.0.0)
   - SDWebImage (~> 4.0.0)
@@ -28,7 +26,6 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
-  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   ReactiveCocoa: ca689e37b6a922f0273918220d735c43368de550
   ReactiveSwift: 36339167e571774d936482d0f6512f5118a74731
@@ -36,6 +33,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 1d3d6c10dc01fda7317e2b8835a0133bda0f9a8b
+PODFILE CHECKSUM: b599b0e8f55cc6d8816b5a8713dee9168b10615e
 
 COCOAPODS: 1.2.0
