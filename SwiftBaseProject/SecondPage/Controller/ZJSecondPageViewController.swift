@@ -45,6 +45,12 @@ class ZJSecondPageViewController: ZJBaseViewController ,iCarouselDelegate,iCarou
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = UIView.init(frame: carousel.bounds)
         view.backgroundColor = UIColor.randomColor
+        let label = UILabel.init(frame: carousel.bounds)
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = "\(index+1)"
+        label.font = UIFont.systemFont(ofSize: 40)
+        view .addSubview(label)
         return view
     }
     
