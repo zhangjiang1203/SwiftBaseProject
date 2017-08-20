@@ -53,8 +53,6 @@ class ZJSecondPageViewController: ZJBaseViewController ,iCarouselDelegate,iCarou
         view .addSubview(label)
         return view
     }
-    
-
 }
 
 
