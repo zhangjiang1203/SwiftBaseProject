@@ -23,6 +23,7 @@ class ZJCarouselManager: NSObject {
     fileprivate var page6 = 1
     fileprivate var page7 = 1
     fileprivate var page8 = 1
+    fileprivate var page9 = 1
     
     //添加数组
     fileprivate var infoDataArr0 = NSMutableArray()
@@ -34,28 +35,26 @@ class ZJCarouselManager: NSObject {
     fileprivate var infoDataArr6 = NSMutableArray()
     fileprivate var infoDataArr7 = NSMutableArray()
     fileprivate var infoDataArr8 = NSMutableArray()
+    fileprivate var infoDataArr9 = NSMutableArray()
     
     //添加绑定的数据
     fileprivate var indexsArr = NSMutableArray()
     fileprivate var pagesArr = NSMutableArray()
 
-    
     override init() {
         super.init()
         setOrignalDataArr()
         setOrignalDataPage()
     }
     
-    
-    
     /// 初始化数据数组
     func setOrignalDataArr()  {
-        indexsArr.addObjects(from: [infoDataArr0,infoDataArr1,infoDataArr2,infoDataArr3,infoDataArr4,infoDataArr5,infoDataArr6,infoDataArr7,infoDataArr8])
+        indexsArr.addObjects(from: [infoDataArr0,infoDataArr1,infoDataArr2,infoDataArr3,infoDataArr4,infoDataArr5,infoDataArr6,infoDataArr7,infoDataArr8,infoDataArr9])
     }
     
     /// 初始化当前页数数组
     func setOrignalDataPage() {
-        pagesArr.addObjects(from: [page0,page1,page2,page3,page4,page5,page6,page7,page8])
+        pagesArr.addObjects(from: [page0,page1,page2,page3,page4,page5,page6,page7,page8,page9])
     }
     
     /// 获取当前index对应的数组
@@ -78,7 +77,6 @@ class ZJCarouselManager: NSObject {
         return pagesArr[index] as! NSInteger
     }
     
-    
     /// 首次请求数据
     ///
     /// - Parameters:
@@ -90,7 +88,6 @@ class ZJCarouselManager: NSObject {
         getInformation(index: index, type: type, isRefresh: isRefresh, dataBlock: data)
     }
     
-    
     /// 刷新数据
     ///
     /// - Parameters:
@@ -100,7 +97,6 @@ class ZJCarouselManager: NSObject {
     func refreshInformation(index:NSInteger,type:NSInteger,dataBlock:@escaping (NSArray)->Void) {
         getInformation(index: index, type: type, isRefresh: true, dataBlock: dataBlock)
     }
-    
     
     /// 加载更多数据
     ///
@@ -144,7 +140,6 @@ class ZJCarouselManager: NSObject {
         }
     }
     
-    
     /// 设置请求参数
     ///
     /// - Parameters:
@@ -161,5 +156,4 @@ class ZJCarouselManager: NSObject {
         }
         params("\(page)" as NSString)
     }
-
 }

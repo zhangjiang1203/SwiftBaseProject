@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZJFirstPageViewController" customModule="SwiftBaseProject" customModuleProvider="target">
             <connections>
-                <outlet property="myTableView" destination="Wvt-fM-e0V" id="jgP-9n-90K"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +18,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wvt-fM-e0V">
-                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="Wvt-fM-e0V" secondAttribute="trailing" id="4bv-7U-L64"/>
-                <constraint firstAttribute="bottom" secondItem="Wvt-fM-e0V" secondAttribute="bottom" id="F6D-oB-6ho"/>
-                <constraint firstItem="Wvt-fM-e0V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ce8-vj-AVx"/>
-                <constraint firstItem="Wvt-fM-e0V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="n2C-0z-Xzc"/>
-            </constraints>
         </view>
     </objects>
 </document>

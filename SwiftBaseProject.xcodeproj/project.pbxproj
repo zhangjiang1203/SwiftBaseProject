@@ -47,7 +47,6 @@
 		2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */; };
 		2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */; };
 		2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */; };
-		28AECA8D1F380278000A257D /* ZJFirstPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */; };
 		28AECA901F380B75000A257D /* ZJFirstPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA8E1F380B75000A257D /* ZJFirstPageCell.swift */; };
 		28AECA911F380B75000A257D /* ZJFirstPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AECA8F1F380B75000A257D /* ZJFirstPageCell.xib */; };
 		28AECA961F385280000A257D /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA951F385280000A257D /* UIImageView+CornerRadius.m */; };
@@ -124,7 +123,6 @@
 		2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publicDefineMethod.swift; sourceTree = "<group>"; };
 		2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJRequestTestModel.swift; sourceTree = "<group>"; };
 		2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSegmentScrollView.swift; sourceTree = "<group>"; };
-		28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageManager.swift; sourceTree = "<group>"; };
 		28AECA8E1F380B75000A257D /* ZJFirstPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageCell.swift; sourceTree = "<group>"; };
 		28AECA8F1F380B75000A257D /* ZJFirstPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFirstPageCell.xib; sourceTree = "<group>"; };
 		28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftBaseProject-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -408,7 +406,6 @@
 		2897B4901F340410001FA611 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				28AECA8C1F380278000A257D /* ZJFirstPageManager.swift */,
 				2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */,
 				CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */,
 			);
@@ -660,7 +657,6 @@
 				281DB1841F3ADC4C0086B13E /* MJRefreshBackGifFooter.m in Sources */,
 				2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */,
 				280954341F394C2600CED268 /* String+Height.swift in Sources */,
-				28AECA8D1F380278000A257D /* ZJFirstPageManager.swift in Sources */,
 				CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */,
 				2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */,
 				281DB1891F3ADC4C0086B13E /* MJRefreshStateHeader.m in Sources */,

@@ -12,14 +12,22 @@ import Result
 
 class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouselDataSource {
 
-    @IBOutlet weak var myTableView: UITableView!
-    
-//    var viewManager:ZJFirstPageManager!
+    var chooseType:NSInteger = 10
     
     var icarouselView = iCarousel()
     
     var viewManager = ZJCarouselManager()
     
+    var segmentView = ZJSegmentScrollView()
+    
+    var carouselType = iCarouselType(rawValue: 0)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        carouselType =  iCarouselType(rawValue: Int(arc4random()%11))
+        icarouselView.type = carouselType!;
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "首页"
@@ -27,68 +35,9 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
         
     }
     
-    func addMySegmentInit()  {
-        
-//        viewManager = ZJFirstPageManager.init()
-//        viewManager.showTableView = myTableView
-//        
-//        myTableView.register(UINib.init(nibName: "ZJFirstPageCell", bundle: nil), forCellReuseIdentifier: "ZJFirstPageCell")
-//        myTableView.delegate = viewManager
-//        myTableView.dataSource = viewManager
-        
-        //设置头部和底部刷新
-//        var images:Array<UIImage> = []
-//        for i in 1...4 {
-//            images.append(UIImage.init(named: "bdj_mj_refresh_\(i)")!)
-//        }
-//        let gifHeader = MJRefreshGifHeader()
-//        gifHeader.setImages(images, for: .idle)
-//        gifHeader.setImages(images, for: .pulling)
-//        gifHeader.setImages(images, for: .refreshing)
-//        gifHeader.setRefreshingTarget(self, refreshingAction: #selector(beginRefresh))
-//        myTableView.mj_header = gifHeader
-//
-//        myTableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
-//            self.viewManager.addAlamofireNetTest(isRefresh: false)
-//        })
-    }
-    
     func addIcarouselView()  {
-        
-        viewManager = ZJCarouselManager.init()
-        viewManager.refreshInformation(index: 0, type: 10) { (dataArr) in
-            print("获取到的数据===%@",dataArr);
-        }
-        
-        //设置分段器
-        let segmentView = ZJSegmentScrollView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: 40))
-        segmentView.selectedColor = RGBCOLOR_HEX(h: 0x00c866)
-        segmentView.scrollClouse = {(index) in
-            var infoType = 0
-            switch index {
-            case 0:
-                infoType = 10
-            case 1:
-                infoType = 29
-            case 2:
-                infoType = 31
-            case 3:
-                infoType = 41
-            default:
-                break;
-            }
-            self.icarouselView.scrollToItem(at: index, animated: false)
-            //请求数据
-            self.viewManager.setInformation(index: index, type: infoType, isRefresh: false, data: { (dataArr) in
-                let pageView = self.icarouselView.itemView(at: index) as! ZJFirstPageView
-                pageView.pageDataArr = dataArr as! NSMutableArray
-            })
-        }
-        segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
-        self.view.addSubview(segmentView)
 
-        
-        icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: KScreenHight-64-49));
+        icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 40, width: KScreenWidth, height: KScreenHight-64-49-40));
         icarouselView.delegate = self
         icarouselView.dataSource = self
         icarouselView.backgroundColor = UIColor.white
@@ -96,21 +45,61 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
         icarouselView.decelerationRate = 0.75;
         icarouselView.isPagingEnabled = true;
         self.view.addSubview(icarouselView)
+        
+        viewManager = ZJCarouselManager.init()
+        //设置分段器
+        segmentView = ZJSegmentScrollView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: 40))
+        segmentView.selectedColor = RGBCOLOR_HEX(h: 0x00c866)
+        segmentView.scrollClouse = {(index) in
+            switch index {
+            case 0:
+                self.chooseType = 10
+            case 1:
+                self.chooseType = 29
+            case 2:
+                self.chooseType = 31
+            case 3:
+                self.chooseType = 41
+            default:
+                break;
+            }
+            self.icarouselView.scrollToItem(at: index, animated: false)
+            //请求数据
+            self.viewManager.setInformation(index: index, type: self.chooseType, isRefresh: false, data: { (dataArr) in
+                let pageView = self.icarouselView.itemView(at: index) as! ZJFirstPageView
+                pageView.pageDataArr = dataArr as! NSMutableArray
+            })
+        }
+        segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
+        self.view.addSubview(segmentView)
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 8
+        return 4
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = ZJFirstPageView.init(frame: carousel.bounds) as ZJFirstPageView
-        
+        view.refreshClouse = { (isRefresh) in
+            //刷新和加载数据
+            if isRefresh {
+                self.viewManager.refreshInformation(index: index, type: self.chooseType, dataBlock: { (dataArr) in
+                    let pageView = self.icarouselView.itemView(at: index) as! ZJFirstPageView
+                    pageView.pageDataArr = dataArr as! NSMutableArray
+                    view.gifHeader.endRefreshing()
+                })
+            }else{
+                self.viewManager.loadMoreInformation(index: index, type: self.chooseType, dataBlock: { (dataArr) in
+                    let pageView = self.icarouselView.itemView(at: index) as! ZJFirstPageView
+                    pageView.pageDataArr = dataArr as! NSMutableArray
+                    view.footerRefresh.endRefreshing()
+                })
+            }
+        }
         return view
     }
-
-    /// 开始刷新
-    func beginRefresh() {
-//        viewManager.addAlamofireNetTest(isRefresh: true)
-    }
     
+    func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
+        segmentView.setScrollToIndex(index: carousel.currentItemIndex)
+    }    
 }

@@ -8,14 +8,18 @@
 
 import UIKit
 
+typealias ZJRefreshBlock = (_ isRefresh:Bool)->Void
+
+
 class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
 
     fileprivate var myTableView:UITableView!
     
-    var headerRefresh = MJRefreshNormalHeader()
+    
+    var gifHeader = MJRefreshGifHeader()
     var footerRefresh = MJRefreshBackNormalFooter()
-    
-    
+    var refreshClouse :((_ isRefresh:Bool)->Void)!
+
     var pageDataArr = NSMutableArray(){
         didSet{
             myTableView.reloadData()
@@ -32,22 +36,38 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     //初始化控件
-    func setupMyUIData()  {
+    fileprivate func setupMyUIData()  {
         myTableView = UITableView.init(frame: self.bounds)
         myTableView.dataSource = self
         myTableView.delegate = self
         myTableView.separatorStyle = .none
         myTableView.register(UINib.init(nibName: "ZJFirstPageCell", bundle: nil), forCellReuseIdentifier: "ZJFirstPageCell")
-        headerRefresh = MJRefreshNormalHeader(refreshingBlock: {
-            self.myTableView.mj_header.endRefreshing()
-        })
-        myTableView.mj_header = headerRefresh
-        footerRefresh = MJRefreshBackNormalFooter(refreshingBlock: { 
-            self.myTableView.mj_footer.endRefreshing()
+        
+        //设置头部和底部刷新
+        var images:Array<UIImage> = []
+        for i in 1...4 {
+            images.append(UIImage.init(named: "bdj_mj_refresh_\(i)")!)
+        }
+        gifHeader = MJRefreshGifHeader()
+        gifHeader.setImages(images, for: .idle)
+        gifHeader.setImages(images, for: .pulling)
+        gifHeader.setImages(images, for: .refreshing)
+        gifHeader.setRefreshingTarget(self, refreshingAction: #selector(beginRefresh))
+        myTableView.mj_header = gifHeader
+
+        footerRefresh = MJRefreshBackNormalFooter(refreshingBlock: {
+            if self.refreshClouse != nil{
+                self.refreshClouse(false)
+            }
         })
         myTableView.mj_footer = footerRefresh
         self.addSubview(myTableView)
-        
+    }
+    
+    @objc fileprivate func beginRefresh()  {
+        if self.refreshClouse != nil{
+            self.refreshClouse(true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +79,6 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.listData = pageDataArr[indexPath.row] as! List
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

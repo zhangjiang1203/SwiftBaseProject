@@ -89,6 +89,7 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
     fileprivate let animationTime = 0.5
     //定义一个闭包传值
     var scrollClouse:((_ index:NSInteger) -> Void)!
+    //当前所在索引
     
 
     override init(frame: CGRect) {
@@ -103,7 +104,7 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
         setUpMySegmentView()
     }
     
-    func setUpMySegmentView()  {
+    fileprivate func setUpMySegmentView()  {
         myScrollView = UIScrollView.init(frame: self.bounds)
         myScrollView.showsVerticalScrollIndicator = false
         myScrollView.showsHorizontalScrollIndicator = false
@@ -121,7 +122,7 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
         myScrollView.addSubview(lineView)
     }
     //添加标签
-    func createMyScrollViewTitleString()  {
+    fileprivate func createMyScrollViewTitleString()  {
         var titleWidthArr:Array<CGFloat> = []
         //计算字符的宽度
         for num in segmentTitleArr.enumerated() {
@@ -154,12 +155,10 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
         lineView.frame = CGRect.init(x: (maxWidth-lineWidth)/2.0, y: viewSize.height-lineHeight, width: lineWidth, height: lineHeight)
         let button = self.viewWithTag(10) as! UIButton
         segmentButtonClick(sender: button)
-        
-        
     }
     
     
-    func segmentButtonClick(sender:UIButton)  {
+    @objc fileprivate func segmentButtonClick(sender:UIButton)  {
         sender.isSelected = true
         selectedBtn.isSelected = false
         selectedBtn = sender;
@@ -202,8 +201,14 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
         }
     }
     
+    
+    func setScrollToIndex(index:NSInteger) {
+        let button = self.viewWithTag(index+10) as! UIButton
+        segmentButtonClick(sender: button)
+    }
+    
     //scrollView滚动
-    func setScrollOffset(index:NSInteger) {
+    fileprivate func setScrollOffset(index:NSInteger) {
         let button = self.viewWithTag(index)
         let rect:CGRect = (button?.frame)!
         let midX = rect.midX
@@ -226,7 +231,7 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
     
     
     //计算文字的宽度
-    func calCharacterWith(_ title:NSString, font:UIFont, height:CGFloat) -> CGFloat {
+    fileprivate func calCharacterWith(_ title:NSString, font:UIFont, height:CGFloat) -> CGFloat {
         
         let width = title.boundingRect(with: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height:height), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil).size.width+10
         
