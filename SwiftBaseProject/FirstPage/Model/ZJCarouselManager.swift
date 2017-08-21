@@ -48,12 +48,12 @@ class ZJCarouselManager: NSObject {
     }
     
     /// 初始化数据数组
-    func setOrignalDataArr()  {
+    fileprivate func setOrignalDataArr()  {
         indexsArr.addObjects(from: [infoDataArr0,infoDataArr1,infoDataArr2,infoDataArr3,infoDataArr4,infoDataArr5,infoDataArr6,infoDataArr7,infoDataArr8,infoDataArr9])
     }
     
     /// 初始化当前页数数组
-    func setOrignalDataPage() {
+    fileprivate func setOrignalDataPage() {
         pagesArr.addObjects(from: [page0,page1,page2,page3,page4,page5,page6,page7,page8,page9])
     }
     
@@ -61,7 +61,7 @@ class ZJCarouselManager: NSObject {
     ///
     /// - Parameter index: 当前下标
     /// - Returns: 返回值
-    func getIndexArray(index:NSInteger) -> NSMutableArray {
+    fileprivate func getIndexArray(index:NSInteger) -> NSMutableArray {
         indexsArr.removeAllObjects()
         setOrignalDataArr()
         return indexsArr[index] as! NSMutableArray
@@ -71,7 +71,7 @@ class ZJCarouselManager: NSObject {
     ///
     /// - Parameter index: 当前下标
     /// - Returns: 返回值
-    func getPage(index:NSInteger) -> NSInteger {
+    fileprivate func getPage(index:NSInteger) -> NSInteger {
         pagesArr.removeAllObjects()
         setOrignalDataPage()
         return pagesArr[index] as! NSInteger
