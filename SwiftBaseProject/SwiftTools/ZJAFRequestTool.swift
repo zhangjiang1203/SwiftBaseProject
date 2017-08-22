@@ -20,7 +20,6 @@ class ZJAFRequestTool {
         configuration.timeoutIntervalForRequest = 30//请求时间限制
         tools.session = Alamofire.SessionManager(configuration: configuration)
         return tools
-        
     }()
 }
 

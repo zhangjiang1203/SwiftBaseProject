@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import HandyJSON
+
 
 //定义一些常用的常量
 let KScreenWidth = UIScreen.main.bounds.size.width;

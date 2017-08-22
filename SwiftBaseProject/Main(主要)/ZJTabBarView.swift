@@ -45,7 +45,6 @@ class ZJTabBarView: UIView {
         buttonClickAction(sender: self.viewWithTag(kButtonTag) as! UIButton)
     }
     
-    
     //添加按钮
     func addTouchButton()  {
         let buttonW = KScreenWidth/CGFloat(titleArr.count)
@@ -54,7 +53,6 @@ class ZJTabBarView: UIView {
             let button = UIButton.init(frame: CGRect.init(x: buttonW * CGFloat(i), y: 0, width: buttonW, height: 49))
             button.setImage(UIImage.init(named: norImageArr[i] as! String), for: .normal)
             button.setImage(UIImage.init(named: selImageArr[i] as! String), for: .selected)
-//            button.setTitle(titleArr[i] as? String, for: .normal)
             button.setTitleColor(norColor, for: .normal)
             button.setTitleColor(selColor, for: .selected)
             button.tag = kButtonTag + i
@@ -64,11 +62,9 @@ class ZJTabBarView: UIView {
     }
     
     func buttonClickAction(sender:UIButton)  {
-        sender.isSelected = true
         selectedBtn.isSelected = false
+        sender.isSelected = true
         selectedBtn = sender
-        
-        //delegate?.buttonIndexClick(index: sender.tag-kButtonTag)
         if (clickAction != nil)  {
             clickAction!(sender.tag-kButtonTag)
         }

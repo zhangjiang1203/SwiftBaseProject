@@ -7,51 +7,48 @@
 //
 
 import UIKit
+import HandyJSON
 
-class ZJSecondPageViewController: ZJBaseViewController ,iCarouselDelegate,iCarouselDataSource{
+class ZJSecondPageViewController: ZJBaseViewController,UITextFieldDelegate {
 
-    var icarouselView = iCarousel()
-    var carouselType = iCarouselType(rawValue: 0)
-    
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userNameField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        carouselType =  iCarouselType(rawValue: Int(arc4random()%11))
-        icarouselView.type = carouselType!;
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "去哪"
-        addIcarouselView()
+        userNameField.delegate = self
+        self.userNameField.tintColor = RGBCOLOR_HEX(h: 0xececec)
     }
     
-    func addIcarouselView()  {
-        icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: KScreenHight-64-49));
-        icarouselView.delegate = self
-        icarouselView.dataSource = self
-        icarouselView.backgroundColor = UIColor.white
-        icarouselView.type = .linear;
-        icarouselView.decelerationRate = 0.75;
-        icarouselView.isPagingEnabled = true;
-        self.view.addSubview(icarouselView)
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        ZJAFRequestTool.getRequest(urlString: "https://api.douban.com/v2/book/search", params: ["q":textField.text!], success: { (response) in
+            print("返回的信息===%@",response)
+            if let model = JSONDeserializer<ZJBookModel>.deserializeFrom(dict: response as? NSDictionary){
+                let bookVC = ZJBookListViewController.init(nibName: nil, bundle: nil)
+                bookVC.searchDataArr = model.books as! NSMutableArray
+                self.navigationController?.pushViewController(bookVC, animated: true)
+            }
+
+        }) { (errorStr) in
+            print("返回的错误信息===%@",errorStr)
+        }
+        return true
     }
     
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return 8
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view = UIView.init(frame: carousel.bounds)
-        view.backgroundColor = UIColor.randomColor
-        let label = UILabel.init(frame: carousel.bounds)
-        label.textAlignment = .center
-        label.textColor = UIColor.white
-        label.text = "\(index+1)"
-        label.font = UIFont.systemFont(ofSize: 40)
-        view .addSubview(label)
-        return view
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 }
 

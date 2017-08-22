@@ -32,11 +32,9 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
         super.viewDidLoad()
         self.navigationItem.title = "首页"
         addIcarouselView()
-        
     }
     
     func addIcarouselView()  {
-
         icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 40, width: KScreenWidth, height: KScreenHight-64-49-40));
         icarouselView.delegate = self
         icarouselView.dataSource = self
