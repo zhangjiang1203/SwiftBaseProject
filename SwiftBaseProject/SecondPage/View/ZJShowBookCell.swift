@@ -14,13 +14,15 @@ class ZJShowBookCell: UITableViewCell {
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookAuthorLabel: UILabel!
     
+    @IBOutlet weak var priceLabel: UILabel!
     var bookModel = Books(){
         didSet{
             //开始赋值
             bookImageView.sd_setImage(with: URL.init(string: bookModel.image!), placeholderImage: UIImage.init(named: ""))
             bookTitleLabel.text = bookModel.title
             
-            bookAuthorLabel.text = String(format: "%@%@", (bookModel.author?.joined(separator: ","))!,bookModel.price!)
+            bookAuthorLabel.text = String(format: "%@", (bookModel.author?.joined(separator: ","))!)
+            priceLabel.text = String(format: "%@", bookModel.price!)
         }
     }
     override func awakeFromNib() {

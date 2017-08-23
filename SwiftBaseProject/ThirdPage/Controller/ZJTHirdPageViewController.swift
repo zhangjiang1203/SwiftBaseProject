@@ -14,6 +14,7 @@ class ZJTHirdPageViewController: ZJBaseViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "行程"
+        self.navigationItem.leftBarButtonItems = nil
     }
 
 }

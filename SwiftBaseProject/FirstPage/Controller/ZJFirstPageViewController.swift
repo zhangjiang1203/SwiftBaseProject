@@ -24,13 +24,14 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        carouselType =  iCarouselType(rawValue: Int(arc4random()%11))
-        icarouselView.type = carouselType!;
+//        carouselType =  iCarouselType(rawValue: Int(arc4random()%11))
+//        icarouselView.type = carouselType!;
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "首页"
+        self.navigationItem.leftBarButtonItems = nil
         addIcarouselView()
     }
     

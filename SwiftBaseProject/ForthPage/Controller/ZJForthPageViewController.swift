@@ -14,6 +14,7 @@ class ZJForthPageViewController: ZJBaseViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "我的"
+        self.navigationItem.leftBarButtonItems = nil
     }
 
 }
