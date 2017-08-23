@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2802ECB51F4D7F4F001F1248 /* ZJCarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */; };
+		2802ECB61F4D7F4F001F1248 /* ZJCarsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */; };
 		280954341F394C2600CED268 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280954331F394C2600CED268 /* String+Height.swift */; };
 		281DB17C1F3ADC4C0086B13E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB1501F3ADC4C0086B13E /* MJRefreshAutoFooter.m */; };
 		281DB17D1F3ADC4C0086B13E /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB1521F3ADC4C0086B13E /* MJRefreshBackFooter.m */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarsListViewController.swift; sourceTree = "<group>"; };
+		2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJCarsListViewController.xib; sourceTree = "<group>"; };
 		280954331F394C2600CED268 /* String+Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		281DB14F1F3ADC4C0086B13E /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		281DB1501F3ADC4C0086B13E /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -399,6 +403,8 @@
 			children = (
 				2888B13D1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift */,
 				2888B13E1F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib */,
+				2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */,
+				2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				281DB18A1F3ADC4C0086B13E /* MJRefresh.bundle in Resources */,
 				2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */,
 				28E5953A1F4D631C0097ED24 /* Car.json in Resources */,
+				2802ECB61F4D7F4F001F1248 /* ZJCarsListViewController.xib in Resources */,
 				28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */,
 				2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */,
 			);
@@ -684,6 +691,7 @@
 				281DB1841F3ADC4C0086B13E /* MJRefreshBackGifFooter.m in Sources */,
 				2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */,
 				280954341F394C2600CED268 /* String+Height.swift in Sources */,
+				2802ECB51F4D7F4F001F1248 /* ZJCarsListViewController.swift in Sources */,
 				CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */,
 				281DB1891F3ADC4C0086B13E /* MJRefreshStateHeader.m in Sources */,
 				281DB1851F3ADC4C0086B13E /* MJRefreshBackNormalFooter.m in Sources */,
