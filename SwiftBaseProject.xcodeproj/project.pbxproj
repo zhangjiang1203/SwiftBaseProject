@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2802ECB51F4D7F4F001F1248 /* ZJCarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */; };
-		2802ECB61F4D7F4F001F1248 /* ZJCarsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */; };
 		280954341F394C2600CED268 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280954331F394C2600CED268 /* String+Height.swift */; };
 		281DB17C1F3ADC4C0086B13E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB1501F3ADC4C0086B13E /* MJRefreshAutoFooter.m */; };
 		281DB17D1F3ADC4C0086B13E /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB1521F3ADC4C0086B13E /* MJRefreshBackFooter.m */; };
@@ -63,6 +62,8 @@
 		28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA9E1F3859A3000A257D /* MBProgressHUD.m */; };
 		28E5953A1F4D631C0097ED24 /* Car.json in Resources */ = {isa = PBXBuildFile; fileRef = 28E595391F4D631C0097ED24 /* Car.json */; };
 		28FAF72C1F3D910D008B798F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FAF72B1F3D910D008B798F /* iCarousel.m */; };
+		CF650C011F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */; };
+		CF650C021F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */; };
 		CF7279731F45CFFC0093FD00 /* ZJFirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279721F45CFFC0093FD00 /* ZJFirstPageView.swift */; };
 		CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */; };
 		FBA49481C99E7969E23F282A /* Pods_SwiftBaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */; };
@@ -71,7 +72,6 @@
 /* Begin PBXFileReference section */
 		030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarsListViewController.swift; sourceTree = "<group>"; };
-		2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJCarsListViewController.xib; sourceTree = "<group>"; };
 		280954331F394C2600CED268 /* String+Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		281DB14F1F3ADC4C0086B13E /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		281DB1501F3ADC4C0086B13E /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 		28FAF72B1F3D910D008B798F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A3F274E8A89CB192340B412D /* Pods-SwiftBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BE897518B2A3280EF782F1F9 /* Pods-SwiftBaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.release.xcconfig"; sourceTree = "<group>"; };
+		CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarsDetailViewController.swift; sourceTree = "<group>"; };
+		CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJCarsDetailViewController.xib; sourceTree = "<group>"; };
 		CF7279721F45CFFC0093FD00 /* ZJFirstPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageView.swift; sourceTree = "<group>"; };
 		CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarouselManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -404,7 +406,8 @@
 				2888B13D1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift */,
 				2888B13E1F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib */,
 				2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */,
-				2802ECB41F4D7F4F001F1248 /* ZJCarsListViewController.xib */,
+				CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */,
+				CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,7 +614,7 @@
 				281DB18A1F3ADC4C0086B13E /* MJRefresh.bundle in Resources */,
 				2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */,
 				28E5953A1F4D631C0097ED24 /* Car.json in Resources */,
-				2802ECB61F4D7F4F001F1248 /* ZJCarsListViewController.xib in Resources */,
+				CF650C021F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib in Resources */,
 				28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */,
 				2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */,
 			);
@@ -680,6 +683,7 @@
 				2888B12A1F2EC3A80082E7D0 /* ZJBaseNavViewController.swift in Sources */,
 				2888B1221F2EC3200082E7D0 /* ZJBaseViewController.swift in Sources */,
 				2888B13B1F2EC4D40082E7D0 /* ZJForthPageViewController.swift in Sources */,
+				CF650C011F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift in Sources */,
 				2888B12C1F2EC3F80082E7D0 /* ZJTabBarView.swift in Sources */,
 				28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */,
 				2894F5A11F4C185700DC2832 /* ZJBookListViewController.swift in Sources */,

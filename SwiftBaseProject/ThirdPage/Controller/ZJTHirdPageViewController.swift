@@ -107,7 +107,7 @@ class ZJTHirdPageViewController: ZJBaseViewController,UITableViewDelegate,UITabl
     
     //在选择具体的型号
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let carListVC = ZJCarsListViewController.init(nibName: "ZJCarsListViewController", bundle: nil)
+        let carListVC = ZJCarsListViewController.init(nibName: nil, bundle: nil)
         let carName = carsArr[indexPath.section] as! Dictionary<String,Any>
         let detailCar = carName["cars"] as! Array<Dictionary<String,String>>
         let carInfo = detailCar[indexPath.row]
