@@ -12,8 +12,7 @@ class ZJTHirdPageViewController: ZJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = "行程"
+        self.navigationItem.title = "汽车"
         self.navigationItem.leftBarButtonItems = nil
     }
 

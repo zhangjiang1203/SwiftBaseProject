@@ -59,6 +59,7 @@
 		28AECA9B1F385697000A257D /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA991F385697000A257D /* MBProgressHUD+Add.m */; };
 		28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 28AECA9A1F385697000A257D /* MBProgressHUD.bundle */; };
 		28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA9E1F3859A3000A257D /* MBProgressHUD.m */; };
+		28E5953A1F4D631C0097ED24 /* Car.json in Resources */ = {isa = PBXBuildFile; fileRef = 28E595391F4D631C0097ED24 /* Car.json */; };
 		28FAF72C1F3D910D008B798F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FAF72B1F3D910D008B798F /* iCarousel.m */; };
 		CF7279731F45CFFC0093FD00 /* ZJFirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279721F45CFFC0093FD00 /* ZJFirstPageView.swift */; };
 		CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */; };
@@ -145,6 +146,7 @@
 		28AECA9A1F385697000A257D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		28AECA9D1F3859A3000A257D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		28AECA9E1F3859A3000A257D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		28E595391F4D631C0097ED24 /* Car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Car.json; sourceTree = "<group>"; };
 		28FAF72A1F3D910D008B798F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		28FAF72B1F3D910D008B798F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A3F274E8A89CB192340B412D /* Pods-SwiftBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 		2897B4941F340420001FA611 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28E595391F4D631C0097ED24 /* Car.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */,
 				281DB18A1F3ADC4C0086B13E /* MJRefresh.bundle in Resources */,
 				2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */,
+				28E5953A1F4D631C0097ED24 /* Car.json in Resources */,
 				28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */,
 				2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */,
 			);

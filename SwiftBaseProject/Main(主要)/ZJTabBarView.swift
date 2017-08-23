@@ -37,9 +37,9 @@ class ZJTabBarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        titleArr.addObjects(from: ["首页","内涵","资讯","我的"])
-        norImageArr.addObjects(from: ["icon_homePage_nor","icon_goWhere_nor","icon_route_nor","icon_person_nor"])
-        selImageArr.addObjects(from: ["icon_homePage_sel","icon_goWhere_sel","icon_route_sel","icon_person_sel"])
+        titleArr.addObjects(from: ["首页","图书","汽车","其他"])
+        norImageArr.addObjects(from: ["swift_first_nor","swift_book_nor","swift_car_nor","swift_other_nor"])
+        selImageArr.addObjects(from: ["swift_first_sel","swift_book_sel","swift_car_sel","swift_other_sel"])
         addTouchButton()
         //默认选中第一个
         buttonClickAction(sender: self.viewWithTag(kButtonTag) as! UIButton)
