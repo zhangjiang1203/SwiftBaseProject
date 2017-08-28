@@ -85,6 +85,7 @@ class ZJCarsDetailViewController: ZJBaseViewController,UITableViewDelegate,UITab
         var cell = tableView.dequeueReusableCell(withIdentifier: "systemCell")
         if cell == nil{
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "systemCell")
+            cell?.selectionStyle = .none
         }
         let model = carProprotyArr[indexPath.section]
         let proper = model.value?[indexPath.row]
