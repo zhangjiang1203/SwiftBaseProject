@@ -47,6 +47,8 @@ extension String {
 
 
 extension UIImageView{
+    
+    /// 防止图片变形 自适应
     func setContentImageView() {
         self.contentScaleFactor = UIScreen.main.scale
         self.contentMode = .scaleToFill

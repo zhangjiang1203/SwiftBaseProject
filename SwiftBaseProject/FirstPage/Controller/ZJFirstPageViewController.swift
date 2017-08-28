@@ -36,7 +36,7 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
     }
     
     func addIcarouselView()  {
-        icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 40, width: KScreenWidth, height: KScreenHight-64-49-40));
+        icarouselView = iCarousel.init(frame: CGRect.init(x: 0, y: 40, width: KScreenWidth, height: KScreenHight-64-40));
         icarouselView.delegate = self
         icarouselView.dataSource = self
         icarouselView.backgroundColor = UIColor.white

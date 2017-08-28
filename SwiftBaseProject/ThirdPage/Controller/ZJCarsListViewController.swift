@@ -55,7 +55,7 @@ class ZJCarsListViewController: ZJBaseViewController,UITableViewDelegate,UITable
         self.view.addSubview(lineLabel)
         
         //获取品牌数据
-        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/brand/query?key=10318870f4a99", params: ["key":"10318870f4a99"], success: { (response) in
+        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/brand/query", params: ["key":"10318870f4a99"], success: { (response) in
             self.carsDataList = response as! Dictionary<String, Any>
             let allCars = self.carsDataList["result"] as! Array<Dictionary<String, Any>>
             for (_,value) in allCars.enumerated(){
@@ -113,7 +113,7 @@ class ZJCarsListViewController: ZJBaseViewController,UITableViewDelegate,UITable
                 print("请求失败===%@",errorStr)
             })
         }else{
-            let detailVC = ZJCarsDetailViewController.init(nibName: "ZJCarsDetailViewController", bundle: nil)
+            let detailVC = ZJCarsDetailViewController.init(nibName:"ZJCarsDetailViewController", bundle: nil)
             detailVC.title = rightDetailArr[indexPath.row]["brandName"]
             detailVC.carId = rightDetailArr[indexPath.row]["carId"]
             self.navigationController?.pushViewController(detailVC, animated: true)

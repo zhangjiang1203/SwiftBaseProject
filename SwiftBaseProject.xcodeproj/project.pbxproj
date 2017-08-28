@@ -30,6 +30,8 @@
 		281DB18E1F3ADC4C0086B13E /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB1791F3ADC4C0086B13E /* UIScrollView+MJRefresh.m */; };
 		281DB18F1F3ADC4C0086B13E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 281DB17B1F3ADC4C0086B13E /* UIView+MJExtension.m */; };
 		28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */; };
+		287F32941F53C4C100194E2B /* ZJCarsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287F32931F53C4C100194E2B /* ZJCarsDetailViewController.xib */; };
+		288600E91F4E7F58009FB90E /* ZJCarDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288600E81F4E7F58009FB90E /* ZJCarDetailModel.swift */; };
 		2888B10A1F2EC1940082E7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1091F2EC1940082E7D0 /* AppDelegate.swift */; };
 		2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2888B1101F2EC1940082E7D0 /* Assets.xcassets */; };
 		2888B1221F2EC3200082E7D0 /* ZJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1211F2EC3200082E7D0 /* ZJBaseViewController.swift */; };
@@ -63,7 +65,6 @@
 		28E5953A1F4D631C0097ED24 /* Car.json in Resources */ = {isa = PBXBuildFile; fileRef = 28E595391F4D631C0097ED24 /* Car.json */; };
 		28FAF72C1F3D910D008B798F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FAF72B1F3D910D008B798F /* iCarousel.m */; };
 		CF650C011F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */; };
-		CF650C021F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */; };
 		CF7279731F45CFFC0093FD00 /* ZJFirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279721F45CFFC0093FD00 /* ZJFirstPageView.swift */; };
 		CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */; };
 		FBA49481C99E7969E23F282A /* Pods_SwiftBaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030B3E546D0507D1BC765D3A /* Pods_SwiftBaseProject.framework */; };
@@ -114,6 +115,8 @@
 		281DB17A1F3ADC4C0086B13E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		281DB17B1F3ADC4C0086B13E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		28579B8B1F306F0000E5DE1F /* ZJAFRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAFRequestTool.swift; sourceTree = "<group>"; };
+		287F32931F53C4C100194E2B /* ZJCarsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJCarsDetailViewController.xib; sourceTree = "<group>"; };
+		288600E81F4E7F58009FB90E /* ZJCarDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarDetailModel.swift; sourceTree = "<group>"; };
 		2888B1061F2EC1940082E7D0 /* SwiftBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2888B1091F2EC1940082E7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2888B1101F2EC1940082E7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,7 +159,6 @@
 		A3F274E8A89CB192340B412D /* Pods-SwiftBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BE897518B2A3280EF782F1F9 /* Pods-SwiftBaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseProject/Pods-SwiftBaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarsDetailViewController.swift; sourceTree = "<group>"; };
-		CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJCarsDetailViewController.xib; sourceTree = "<group>"; };
 		CF7279721F45CFFC0093FD00 /* ZJFirstPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageView.swift; sourceTree = "<group>"; };
 		CF7279741F45E31B0093FD00 /* ZJCarouselManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJCarouselManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -407,7 +409,7 @@
 				2888B13E1F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib */,
 				2802ECB31F4D7F4F001F1248 /* ZJCarsListViewController.swift */,
 				CF650BFF1F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift */,
-				CF650C001F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib */,
+				287F32931F53C4C100194E2B /* ZJCarsDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -468,6 +470,7 @@
 		2897B4941F340420001FA611 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				288600E81F4E7F58009FB90E /* ZJCarDetailModel.swift */,
 				28E595391F4D631C0097ED24 /* Car.json */,
 			);
 			path = Model;
@@ -611,10 +614,10 @@
 				28AECA911F380B75000A257D /* ZJFirstPageCell.xib in Resources */,
 				2888B1441F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib in Resources */,
 				2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */,
+				287F32941F53C4C100194E2B /* ZJCarsDetailViewController.xib in Resources */,
 				281DB18A1F3ADC4C0086B13E /* MJRefresh.bundle in Resources */,
 				2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */,
 				28E5953A1F4D631C0097ED24 /* Car.json in Resources */,
-				CF650C021F4DADEC00F9E3C4 /* ZJCarsDetailViewController.xib in Resources */,
 				28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */,
 				2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */,
 			);
@@ -690,6 +693,7 @@
 				2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */,
 				281DB17E1F3ADC4C0086B13E /* MJRefreshComponent.m in Sources */,
 				2894F5A81F4C2A5600DC2832 /* ZJShowBookCell.swift in Sources */,
+				288600E91F4E7F58009FB90E /* ZJCarDetailModel.swift in Sources */,
 				281DB18E1F3ADC4C0086B13E /* UIScrollView+MJRefresh.m in Sources */,
 				28AECA9F1F3859A3000A257D /* MBProgressHUD.m in Sources */,
 				281DB1841F3ADC4C0086B13E /* MJRefreshBackGifFooter.m in Sources */,
