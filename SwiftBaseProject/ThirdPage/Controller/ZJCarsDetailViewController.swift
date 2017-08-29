@@ -38,7 +38,7 @@ class ZJCarsDetailViewController: ZJBaseViewController,UITableViewDelegate,UITab
     
     func getCarPropertyData() {
         //开始请求信息
-        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/series/query", params: ["cid":carId,"key":"10318870f4a99"], success: { (response) in
+        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/series/query", params: ["cid":carId,"key":KShareSDKKey], success: { (response) in
             let myResponse = response as! NSDictionary
             let arr = myResponse["result"] as! NSArray
             let dict = arr.firstObject as! NSDictionary

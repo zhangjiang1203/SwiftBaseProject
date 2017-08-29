@@ -55,7 +55,7 @@ class ZJCarsListViewController: ZJBaseViewController,UITableViewDelegate,UITable
         self.view.addSubview(lineLabel)
         
         //获取品牌数据
-        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/brand/query", params: ["key":"10318870f4a99"], success: { (response) in
+        ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/brand/query", params: ["key":KShareSDKKey], success: { (response) in
             self.carsDataList = response as! Dictionary<String, Any>
             let allCars = self.carsDataList["result"] as! Array<Dictionary<String, Any>>
             for (_,value) in allCars.enumerated(){
@@ -106,7 +106,7 @@ class ZJCarsListViewController: ZJBaseViewController,UITableViewDelegate,UITable
             rightTableView.frame = CGRect.init(x: KScreenWidth/4, y: 0, width: KScreenWidth*3/4, height: KScreenHight-64)
             //查询数据
             let dict = leftDetailArr[indexPath.row]
-            ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/seriesname/query", params: ["name":dict["type"]!,"key":"10318870f4a99"], success: { (response) in
+            ZJAFRequestTool.getRequest(urlString: "http://apicloud.mob.com/car/seriesname/query", params: ["name":dict["type"]!,"key":KShareSDKKey], success: { (response) in
                 self.rightDetailArr = response["result"] as! Array<Dictionary<String,String>>
                 self.rightTableView.reloadData()
             }, failture: { (errorStr) in

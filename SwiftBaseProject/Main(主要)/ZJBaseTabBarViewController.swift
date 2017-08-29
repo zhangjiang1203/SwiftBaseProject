@@ -18,10 +18,10 @@ class ZJBaseTabBarViewController: UITabBarController,ZJTabBarDelegate {
     
     //初始化视图
     func initMyShowViewController()  {
-        let firstPage = ZJFirstPageViewController.init(nibName: "ZJFirstPageViewController", bundle: nil)
+        let firstPage = ZJFirstPageViewController.init(nibName: nil, bundle: nil)
         let secondPage = ZJSecondPageViewController.init(nibName: "ZJSecondPageViewController", bundle: nil)
         let thirdPage = ZJTHirdPageViewController.init(nibName: "ZJTHirdPageViewController", bundle: nil)
-        let forthPage = ZJForthPageViewController.init(nibName: "ZJForthPageViewController", bundle: nil)
+        let forthPage = ZJForthPageViewController.init(nibName: nil, bundle: nil)
         let vcs = [firstPage,secondPage,thirdPage,forthPage]
         let navs = NSMutableArray.init();
         for viewControllers in vcs{

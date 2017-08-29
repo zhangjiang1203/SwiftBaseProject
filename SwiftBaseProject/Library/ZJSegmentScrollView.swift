@@ -105,16 +105,17 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
     }
     
     fileprivate func setUpMySegmentView()  {
-        myScrollView = UIScrollView.init(frame: self.bounds)
+        myScrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 0, width: viewSize.width, height: viewSize.height))
         myScrollView.showsVerticalScrollIndicator = false
         myScrollView.showsHorizontalScrollIndicator = false
         myScrollView.delegate = self
+        myScrollView.bounces = false
         self.addSubview(myScrollView);
         
         //添加底部固定横线
-        let bottomLineView = UIView.init(frame: CGRect.init(x: 0, y: self.bounds.size.height-1, width: self.bounds.size.width, height: 1))
+        let bottomLineView = UIView.init(frame: CGRect.init(x: 0, y: viewSize.height-1, width: viewSize.width, height: 1))
         bottomLineView.backgroundColor = UIColor.init(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1)
-        myScrollView.addSubview(bottomLineView)
+        self.addSubview(bottomLineView)
         
         //添加滚动横线
         lineView = UIView.init(frame: CGRect.init(x: (maxWidth-lineWidth)/2.0, y: viewSize.height-lineHeight, width: lineWidth, height: lineHeight))
@@ -137,7 +138,7 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
         }
 
         maxWidth = maxWidth*CGFloat(titleWidthArr.count) > viewSize.width ? maxWidth:(viewSize.width/CGFloat(titleWidthArr.count))
-        myScrollView.contentSize = CGSize.init(width: maxWidth*CGFloat(titleWidthArr.count), height: viewSize.height)
+        myScrollView.contentSize = CGSize.init(width: maxWidth*CGFloat(titleWidthArr.count), height:0)
 
         //添加按钮设置数据
         for item in segmentTitleArr.enumerated() {
@@ -149,7 +150,6 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
             button.addTarget(self, action: #selector(segmentButtonClick(sender:)), for: .touchUpInside)
             button.tag = item.offset + 10
             myScrollView.addSubview(button)
-            
         }
         //添加横线
         lineView.frame = CGRect.init(x: (maxWidth-lineWidth)/2.0, y: viewSize.height-lineHeight, width: lineWidth, height: lineHeight)

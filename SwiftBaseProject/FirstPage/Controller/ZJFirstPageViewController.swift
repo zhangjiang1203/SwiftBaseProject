@@ -69,10 +69,11 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
                 pageView.pageDataArr = dataArr as! NSMutableArray
             })
         }
-        segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
+        segmentView.segmentTitleArr = ["图片","段子","声音","视频","社会资讯","足球","彩票"]
         self.view.addSubview(segmentView)
     }
     
+    //carousel的代理方发
     func numberOfItems(in carousel: iCarousel) -> Int {
         return 4
     }

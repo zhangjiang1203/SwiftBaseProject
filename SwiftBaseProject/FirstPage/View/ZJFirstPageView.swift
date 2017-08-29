@@ -8,13 +8,9 @@
 
 import UIKit
 
-typealias ZJRefreshBlock = (_ isRefresh:Bool)->Void
-
-
 class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
 
     fileprivate var myTableView:UITableView!
-    
     
     var gifHeader = MJRefreshGifHeader()
     var footerRefresh = MJRefreshBackNormalFooter()

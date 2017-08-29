@@ -15,6 +15,8 @@ import HandyJSON
 let KScreenWidth = UIScreen.main.bounds.size.width;
 let KScreenHight = UIScreen.main.bounds.size.height;
 
+let KShareSDKKey = "10318870f4a99"
+
 
 /*
  默认颜色
