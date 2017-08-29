@@ -69,7 +69,7 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
                 pageView.pageDataArr = dataArr as! NSMutableArray
             })
         }
-        segmentView.segmentTitleArr = ["图片","段子","声音","视频","社会资讯","足球","彩票"]
+        segmentView.segmentTitleArr = ["图片","段子","声音","视频"]
         self.view.addSubview(segmentView)
     }
     
@@ -80,6 +80,7 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = ZJFirstPageView.init(frame: carousel.bounds) as ZJFirstPageView
+        view.parentVC = self
         view.refreshClouse = { (isRefresh) in
             //刷新和加载数据
             if isRefresh {

@@ -15,6 +15,8 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     var gifHeader = MJRefreshGifHeader()
     var footerRefresh = MJRefreshBackNormalFooter()
     var refreshClouse :((_ isRefresh:Bool)->Void)!
+    var parentVC = ZJFirstPageViewController()
+    
 
     var pageDataArr = NSMutableArray(){
         didSet{
@@ -79,6 +81,14 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (pageDataArr[indexPath.row] as! List).cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contentVC = ZJDetailContentViewController.init(nibName: nil, bundle: nil)
+        let model = pageDataArr[indexPath.row] as! List
+        contentVC.pageURL = model.weixin_url
+        self.parentVC.navigationController?.pushViewController(contentVC, animated: true)
+        
     }
     
 }

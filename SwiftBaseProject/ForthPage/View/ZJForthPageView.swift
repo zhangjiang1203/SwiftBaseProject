@@ -15,11 +15,7 @@ class ZJForthPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     var footerRefresh = MJRefreshBackNormalFooter()
     var refreshClouse :((_ isRefresh:Bool)->Void)!
     var parentVC = ZJForthPageViewController()
-    
-    
     var myTableView = UITableView()
-    
-    
     var showDataArr = NSArray(){
         didSet{
             //刷新数据
@@ -68,6 +64,7 @@ class ZJForthPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "forthCell") as! ZJForthPageCell
+        cell.selectionStyle = .none
         cell.listModel = showDataArr[indexPath.row] as! MyList
         return cell
     }
