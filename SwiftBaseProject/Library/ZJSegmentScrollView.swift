@@ -149,12 +149,15 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
             button.titleLabel?.font = buttonFont
             button.addTarget(self, action: #selector(segmentButtonClick(sender:)), for: .touchUpInside)
             button.tag = item.offset + 10
+            button.isSelected = (item.offset == 0)
             myScrollView.addSubview(button)
         }
         //添加横线
         lineView.frame = CGRect.init(x: (maxWidth-lineWidth)/2.0, y: viewSize.height-lineHeight, width: lineWidth, height: lineHeight)
-        let button = self.viewWithTag(10) as! UIButton
-        segmentButtonClick(sender: button)
+        //暂时先不用调用 carousel在代理方法中会调用setScrollToIndex  这个已经调用了segmentButtonClick函数
+        //TODO: 如果不使用carousel类库 下面的方法要实现
+//        let button = self.viewWithTag(10) as! UIButton
+//        segmentButtonClick(sender: button)
     }
     
     

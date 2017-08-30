@@ -43,6 +43,7 @@ class ZJForthPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
         //设置分段器
         segmentView = ZJSegmentScrollView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: 40))
         segmentView.selectedColor = RGBCOLOR_HEX(h: 0x00c866)
+        segmentView.isHidden = true
         segmentView.scrollClouse = {(index) in
             let dict = self.segmentTitleArr[index]
             self.chooseType = (dict["cid"]?.integerValue)!
@@ -68,6 +69,7 @@ class ZJForthPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
                 titleArr.append(myData["name"]!)
             }
             self.segmentView.segmentTitleArr = titleArr
+            self.segmentView.isHidden = false
             self.icarouselView.reloadData()
         }) { (errorStr) in
             MBProgressHUD.hide(for: self.view, animated: true)
