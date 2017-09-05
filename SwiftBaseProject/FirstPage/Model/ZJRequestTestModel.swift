@@ -130,24 +130,23 @@ class List: HandyJSON {
     
     //声音
     var image_small: String?
+    //图片的高度
+    var imageHeight:CGFloat = 0
+    //是否计算过了
+    var isLoad:Bool = false
+    //当前所在的下标
+    var dataIndex:Int = 0
+    
     
     //计算cell显示的高度
     var cellHeight:CGFloat{
         get{
             let tempStr = self.text! as NSString
+            print("获取的高度=%@=",imageHeight)
             let textHeight = tempStr.getSuitSize(withFontSize: 15, bold: false, sizeOfX: Float(KScreenWidth-30))
-        
-            var imageHeight:CGFloat = 0
-            if self.image0 != nil {
-                imageHeight = 160
-            }else{
-                imageHeight = 0
-            }
             return textHeight + imageHeight + 130;
         }
     }
-    
-
     required init() {
         
     }

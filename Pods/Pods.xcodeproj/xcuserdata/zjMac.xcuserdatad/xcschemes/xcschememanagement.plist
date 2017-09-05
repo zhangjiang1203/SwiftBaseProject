@@ -29,27 +29,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ReactiveSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Result.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27DDB9499F898D591EEB03FA3057D49B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2F0C0F810568D3E82219429D9D870F04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37078CBBB241AB8E94F4943232DA4CF6</key>
+		<key>336D64B0B9240FA868F6286EC5988AFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44571ACEF67479F8B893A50988A35441</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +82,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8629AFC1898DDF73D975ACCF60DBB3F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9065115600790E0FE0211385D9588645</key>
+		<key>A94EC5D11A4254343AFCA006DBFB7E26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9178E1BF9606C9465BCAD3D4BE6E6053</key>
+		<key>C1C8083DF56CAE1D4855C8CB8D23361E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDB4B151CFED7C2C7BEF27EA0FC4956D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBDFBFC4AAE83E0B895CE2908DB890D7</key>
+		<key>CCA035343C82F522EDE572C993D87B39</key>
 		<dict>
 			<key>primary</key>
 			<true/>

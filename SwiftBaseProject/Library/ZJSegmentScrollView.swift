@@ -162,6 +162,10 @@ class ZJSegmentScrollView: UIView ,UIScrollViewDelegate{
     
     
     @objc fileprivate func segmentButtonClick(sender:UIButton)  {
+        
+        if selectTag == sender.tag{
+            return
+        }
         sender.isSelected = true
         selectedBtn.isSelected = false
         selectedBtn = sender;

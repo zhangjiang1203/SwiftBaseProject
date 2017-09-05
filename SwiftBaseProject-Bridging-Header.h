@@ -16,7 +16,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MJRefresh.h"
 #import "iCarousel.h"
-
+#import <YYWebImage/YYWebImage.h>
 
 
 #endif /* SwiftBaseProject_Bridging_Header_h */

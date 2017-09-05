@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ReactiveSwift
-import Result
 
 class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouselDataSource {
 
@@ -24,6 +22,7 @@ class ZJFirstPageViewController: ZJBaseViewController,iCarouselDelegate,iCarouse
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //动态随机设置carousel的动画
 //        carouselType =  iCarouselType(rawValue: Int(arc4random()%11))
 //        icarouselView.type = carouselType!;
     }

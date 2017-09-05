@@ -75,7 +75,16 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ZJFirstPageCell", for: indexPath) as! ZJFirstPageCell
         cell.selectionStyle = .none
-        cell.listData = pageDataArr[indexPath.row] as! List
+        let list = pageDataArr[indexPath.row] as! List
+        list.dataIndex = indexPath.row
+        cell.listData = list
+        cell.refreshClouser = {
+            model in
+            self.pageDataArr.replaceObject(at: model.dataIndex, with: model)
+            if self.pageDataArr.count > 0 {
+                self.myTableView.reloadRows(at: [IndexPath.init(row: model.dataIndex, section: 0)], with: .fade)
+            }
+        }
         return cell
     }
     
