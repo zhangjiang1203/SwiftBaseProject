@@ -10,11 +10,7 @@ import UIKit
 import Kingfisher
 import YYImage
 
-
-
 class ZJFirstPageCell: UITableViewCell {
-
-    
     @IBOutlet weak var userHeaderImage: UIImageView!
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -54,15 +50,23 @@ class ZJFirstPageCell: UITableViewCell {
         if listData.image0 != nil {
             infoImageCons.constant = listData.imageHeight
             infoImageView.yy_setImage(with: URL.init(string: listData.image0!), placeholder: UIImage.init(named: ""), options: .setImageWithFadeAnimation, progress: nil, transform: nil, completion:{(image,URL,type,state,error) in
-                print("completion=%@===%@",image!,URL)
-                //计算模型数组 返回图片的高度 并标识是否是计算过的
-                self.listData.imageHeight = (image?.size.height)!*(KScreenWidth-30)/(image?.size.width)!
-                if (self.listData.imageHeight>700){
-                    self.listData.imageHeight = 500
-                }
-                if self.refreshClouser != nil && !self.listData.isLoad{
-                    self.listData.isLoad = true
-                    self.refreshClouser(self.listData);
+                if image != nil {
+                    print("completion=%@===%@",image!,URL)
+                    //计算模型数组 返回图片的高度 并标识是否是计算过的
+                    self.listData.imageHeight = (image?.size.height)!*(KScreenWidth-30)/(image?.size.width)!
+                    if (self.listData.imageHeight>700){
+                        self.listData.imageHeight = 500
+                    }
+                    if self.refreshClouser != nil && !self.listData.isLoad{
+                        self.listData.isLoad = true
+                        self.refreshClouser(self.listData);
+                    }
+                }else{
+                    self.listData.imageHeight = 0;
+                    if self.refreshClouser != nil && !self.listData.isLoad{
+                        self.listData.isLoad = true
+                        self.refreshClouser(self.listData);
+                    }
                 }
             })
         }else{
@@ -73,6 +77,5 @@ class ZJFirstPageCell: UITableViewCell {
             let button:UIButton = self.viewWithTag(i) as! UIButton
             button.setTitle(String.init(format: " %@", tempDate[i-1]) , for: .normal)
         }
-
     }
 }
