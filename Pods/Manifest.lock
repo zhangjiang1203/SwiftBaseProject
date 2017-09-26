@@ -3,10 +3,19 @@ PODS:
   - HandyJSON (1.7.2)
   - Hero (0.3.6)
   - Kingfisher (3.10.4)
+  - NSObject+Rx (2.3.0):
+    - RxSwift (~> 3.0)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxDataSources (1.0.4):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.6.1)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SnapKit (3.2.0)
+  - Then (2.1.0)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
@@ -20,8 +29,13 @@ DEPENDENCIES:
   - HandyJSON (~> 1.7.1)
   - Hero (~> 0.3.6)
   - Kingfisher (~> 3.10.2)
+  - NSObject+Rx
+  - RxCocoa (~> 3.6.1)
+  - RxDataSources (~> 1.0)
+  - RxSwift (~> 3.6.1)
   - SDWebImage (~> 4.0.0)
   - SnapKit (~> 3.2.0)
+  - Then (~> 2.1.0)
   - YYWebImage
 
 SPEC CHECKSUMS:
@@ -29,12 +43,17 @@ SPEC CHECKSUMS:
   HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
+  NSObject+Rx: 38170f84b948152c05c57260cb853e387a5519d1
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxDataSources: b3389acc5fe2eefb8fcd81a2b76a876ad08bc82a
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Then: 8496793c8fcac95482b943909b440724c7d8d82c
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 4024ac06a08629d3b9bb64e7ce1262b645d9b05e
+PODFILE CHECKSUM: 9bd75c5edd644c291b2b5e24e4752190fb615cff
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.1.1
