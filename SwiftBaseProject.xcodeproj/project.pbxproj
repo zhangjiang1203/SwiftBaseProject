@@ -41,8 +41,6 @@
 		2888B13B1F2EC4D40082E7D0 /* ZJForthPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1391F2EC4D40082E7D0 /* ZJForthPageViewController.swift */; };
 		2888B13F1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B13D1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift */; };
 		2888B1401F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2888B13E1F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib */; };
-		2888B1431F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1411F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift */; };
-		2888B1441F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2888B1421F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib */; };
 		2888B1471F2EC5120082E7D0 /* ZJFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B1451F2EC5120082E7D0 /* ZJFirstPageViewController.swift */; };
 		2888B14B1F2EC7130082E7D0 /* AppDelegateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B14A1F2EC7130082E7D0 /* AppDelegateCategory.swift */; };
 		2888B14E1F2ECDFF0082E7D0 /* publicDefineMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */; };
@@ -53,13 +51,15 @@
 		288A6F1A1F555B410079C4A7 /* ZJForthPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288A6F181F555B410079C4A7 /* ZJForthPageCell.xib */; };
 		288A6F1C1F5561380079C4A7 /* ZJDetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A6F1B1F5561380079C4A7 /* ZJDetailContentViewController.swift */; };
 		2894F59F1F4C14AD00DC2832 /* ZJBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894F59E1F4C14AD00DC2832 /* ZJBookModel.swift */; };
-		2894F5A11F4C185700DC2832 /* ZJBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894F5A01F4C185700DC2832 /* ZJBookListViewController.swift */; };
-		2894F5A41F4C1A5300DC2832 /* ZJBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894F5A21F4C1A5300DC2832 /* ZJBookDetailViewController.swift */; };
-		2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2894F5A31F4C1A5300DC2832 /* ZJBookDetailViewController.xib */; };
 		2894F5A81F4C2A5600DC2832 /* ZJShowBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894F5A61F4C2A5500DC2832 /* ZJShowBookCell.swift */; };
 		2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2894F5A71F4C2A5500DC2832 /* ZJShowBookCell.xib */; };
 		2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */; };
 		2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */; };
+		28AA28731F7A3BF20075D123 /* ZJBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA286E1F7A3BF20075D123 /* ZJBookDetailViewController.swift */; };
+		28AA28741F7A3BF20075D123 /* ZJBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AA286F1F7A3BF20075D123 /* ZJBookDetailViewController.xib */; };
+		28AA28751F7A3BF20075D123 /* ZJBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA28701F7A3BF20075D123 /* ZJBookListViewController.swift */; };
+		28AA287B1F7A3CA40075D123 /* ZJSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA28791F7A3CA40075D123 /* ZJSecondPageViewController.swift */; };
+		28AA28801F7A3D220075D123 /* ZJBookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA287F1F7A3D220075D123 /* ZJBookSearchViewController.swift */; };
 		28AECA901F380B75000A257D /* ZJFirstPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA8E1F380B75000A257D /* ZJFirstPageCell.swift */; };
 		28AECA911F380B75000A257D /* ZJFirstPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AECA8F1F380B75000A257D /* ZJFirstPageCell.xib */; };
 		28AECA961F385280000A257D /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AECA951F385280000A257D /* UIImageView+CornerRadius.m */; };
@@ -132,8 +132,6 @@
 		2888B1391F2EC4D40082E7D0 /* ZJForthPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJForthPageViewController.swift; sourceTree = "<group>"; };
 		2888B13D1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJTHirdPageViewController.swift; sourceTree = "<group>"; };
 		2888B13E1F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJTHirdPageViewController.xib; sourceTree = "<group>"; };
-		2888B1411F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSecondPageViewController.swift; sourceTree = "<group>"; };
-		2888B1421F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJSecondPageViewController.xib; sourceTree = "<group>"; };
 		2888B1451F2EC5120082E7D0 /* ZJFirstPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageViewController.swift; sourceTree = "<group>"; };
 		2888B14A1F2EC7130082E7D0 /* AppDelegateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateCategory.swift; sourceTree = "<group>"; };
 		2888B14D1F2ECDFF0082E7D0 /* publicDefineMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publicDefineMethod.swift; sourceTree = "<group>"; };
@@ -144,13 +142,15 @@
 		288A6F181F555B410079C4A7 /* ZJForthPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJForthPageCell.xib; sourceTree = "<group>"; };
 		288A6F1B1F5561380079C4A7 /* ZJDetailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJDetailContentViewController.swift; sourceTree = "<group>"; };
 		2894F59E1F4C14AD00DC2832 /* ZJBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookModel.swift; sourceTree = "<group>"; };
-		2894F5A01F4C185700DC2832 /* ZJBookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookListViewController.swift; sourceTree = "<group>"; };
-		2894F5A21F4C1A5300DC2832 /* ZJBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookDetailViewController.swift; sourceTree = "<group>"; };
-		2894F5A31F4C1A5300DC2832 /* ZJBookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBookDetailViewController.xib; sourceTree = "<group>"; };
 		2894F5A61F4C2A5500DC2832 /* ZJShowBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJShowBookCell.swift; sourceTree = "<group>"; };
 		2894F5A71F4C2A5500DC2832 /* ZJShowBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJShowBookCell.xib; sourceTree = "<group>"; };
 		2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJRequestTestModel.swift; sourceTree = "<group>"; };
 		2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSegmentScrollView.swift; sourceTree = "<group>"; };
+		28AA286E1F7A3BF20075D123 /* ZJBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookDetailViewController.swift; sourceTree = "<group>"; };
+		28AA286F1F7A3BF20075D123 /* ZJBookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBookDetailViewController.xib; sourceTree = "<group>"; };
+		28AA28701F7A3BF20075D123 /* ZJBookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookListViewController.swift; sourceTree = "<group>"; };
+		28AA28791F7A3CA40075D123 /* ZJSecondPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSecondPageViewController.swift; sourceTree = "<group>"; };
+		28AA287F1F7A3D220075D123 /* ZJBookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJBookSearchViewController.swift; sourceTree = "<group>"; };
 		28AECA8E1F380B75000A257D /* ZJFirstPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJFirstPageCell.swift; sourceTree = "<group>"; };
 		28AECA8F1F380B75000A257D /* ZJFirstPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFirstPageCell.xib; sourceTree = "<group>"; };
 		28AECA921F384F9E000A257D /* SwiftBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftBaseProject-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -372,8 +372,8 @@
 		2888B11F1F2EC2730082E7D0 /* ThirdPage */ = {
 			isa = PBXGroup;
 			children = (
+				28AA286B1F7A362D0075D123 /* View */,
 				2897B4941F340420001FA611 /* Model */,
-				2897B4951F340420001FA611 /* View */,
 				2888B1331F2EC4780082E7D0 /* Controller */,
 			);
 			path = ThirdPage;
@@ -400,11 +400,9 @@
 		2888B1301F2EC4700082E7D0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2888B1411F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift */,
-				2888B1421F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib */,
-				2894F5A01F4C185700DC2832 /* ZJBookListViewController.swift */,
-				2894F5A21F4C1A5300DC2832 /* ZJBookDetailViewController.swift */,
-				2894F5A31F4C1A5300DC2832 /* ZJBookDetailViewController.xib */,
+				28AA28791F7A3CA40075D123 /* ZJSecondPageViewController.swift */,
+				28AA286D1F7A3BF20075D123 /* SearchBook */,
+				28AA286C1F7A3BF20075D123 /* ZhihuModel */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,13 +481,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2897B4951F340420001FA611 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2897B4961F340429001FA611 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +498,31 @@
 				288A6F181F555B410079C4A7 /* ZJForthPageCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		28AA286B1F7A362D0075D123 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28AA286C1F7A3BF20075D123 /* ZhihuModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZhihuModel;
+			sourceTree = "<group>";
+		};
+		28AA286D1F7A3BF20075D123 /* SearchBook */ = {
+			isa = PBXGroup;
+			children = (
+				28AA287F1F7A3D220075D123 /* ZJBookSearchViewController.swift */,
+				28AA286E1F7A3BF20075D123 /* ZJBookDetailViewController.swift */,
+				28AA286F1F7A3BF20075D123 /* ZJBookDetailViewController.xib */,
+				28AA28701F7A3BF20075D123 /* ZJBookListViewController.swift */,
+			);
+			path = SearchBook;
 			sourceTree = "<group>";
 		};
 		28AECA931F385280000A257D /* CornerRadiusCategory */ = {
@@ -622,7 +638,7 @@
 			files = (
 				2888B1401F2EC4E90082E7D0 /* ZJTHirdPageViewController.xib in Resources */,
 				28AECA911F380B75000A257D /* ZJFirstPageCell.xib in Resources */,
-				2888B1441F2EC4FF0082E7D0 /* ZJSecondPageViewController.xib in Resources */,
+				28AA28741F7A3BF20075D123 /* ZJBookDetailViewController.xib in Resources */,
 				288A6F1A1F555B410079C4A7 /* ZJForthPageCell.xib in Resources */,
 				2888B1111F2EC1940082E7D0 /* Assets.xcassets in Resources */,
 				287F32941F53C4C100194E2B /* ZJCarsDetailViewController.xib in Resources */,
@@ -630,7 +646,6 @@
 				2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */,
 				28E5953A1F4D631C0097ED24 /* Car.json in Resources */,
 				28AECA9C1F385697000A257D /* MBProgressHUD.bundle in Resources */,
-				2894F5A51F4C1A5300DC2832 /* ZJBookDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +716,6 @@
 				CF650C011F4DADEC00F9E3C4 /* ZJCarsDetailViewController.swift in Sources */,
 				2888B12C1F2EC3F80082E7D0 /* ZJTabBarView.swift in Sources */,
 				28579B8C1F306F0000E5DE1F /* ZJAFRequestTool.swift in Sources */,
-				2894F5A11F4C185700DC2832 /* ZJBookListViewController.swift in Sources */,
 				2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */,
 				281DB17E1F3ADC4C0086B13E /* MJRefreshComponent.m in Sources */,
 				2894F5A81F4C2A5600DC2832 /* ZJShowBookCell.swift in Sources */,
@@ -713,6 +727,7 @@
 				280954341F394C2600CED268 /* String+Height.swift in Sources */,
 				2802ECB51F4D7F4F001F1248 /* ZJCarsListViewController.swift in Sources */,
 				CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */,
+				28AA28731F7A3BF20075D123 /* ZJBookDetailViewController.swift in Sources */,
 				281DB1891F3ADC4C0086B13E /* MJRefreshStateHeader.m in Sources */,
 				281DB1851F3ADC4C0086B13E /* MJRefreshBackNormalFooter.m in Sources */,
 				281DB1821F3ADC4C0086B13E /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -723,6 +738,7 @@
 				281DB1881F3ADC4C0086B13E /* MJRefreshNormalHeader.m in Sources */,
 				281DB1831F3ADC4C0086B13E /* MJRefreshAutoStateFooter.m in Sources */,
 				281DB17D1F3ADC4C0086B13E /* MJRefreshBackFooter.m in Sources */,
+				28AA28801F7A3D220075D123 /* ZJBookSearchViewController.swift in Sources */,
 				281DB1871F3ADC4C0086B13E /* MJRefreshGifHeader.m in Sources */,
 				2888B1471F2EC5120082E7D0 /* ZJFirstPageViewController.swift in Sources */,
 				281DB18B1F3ADC4C0086B13E /* MJRefreshConst.m in Sources */,
@@ -735,11 +751,11 @@
 				2888B13F1F2EC4E90082E7D0 /* ZJTHirdPageViewController.swift in Sources */,
 				281DB1801F3ADC4C0086B13E /* MJRefreshHeader.m in Sources */,
 				288A6F121F5545D40079C4A7 /* ZJForthManager.swift in Sources */,
+				28AA287B1F7A3CA40075D123 /* ZJSecondPageViewController.swift in Sources */,
 				2888B10A1F2EC1940082E7D0 /* AppDelegate.swift in Sources */,
+				28AA28751F7A3BF20075D123 /* ZJBookListViewController.swift in Sources */,
 				2894F59F1F4C14AD00DC2832 /* ZJBookModel.swift in Sources */,
 				288A6F141F5545F30079C4A7 /* ZJForthPageView.swift in Sources */,
-				2894F5A41F4C1A5300DC2832 /* ZJBookDetailViewController.swift in Sources */,
-				2888B1431F2EC4FF0082E7D0 /* ZJSecondPageViewController.swift in Sources */,
 				28AECA9B1F385697000A257D /* MBProgressHUD+Add.m in Sources */,
 				28AECA961F385280000A257D /* UIImageView+CornerRadius.m in Sources */,
 			);

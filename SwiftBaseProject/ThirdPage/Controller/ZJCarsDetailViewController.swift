@@ -24,7 +24,6 @@ class ZJCarsDetailViewController: ZJBaseViewController,UITableViewDelegate,UITab
     
     var carProprotyArr = [CarProperty]()
     
-    
     var carDetailArr = [AnyObject]()
     
     override func viewDidLoad() {
