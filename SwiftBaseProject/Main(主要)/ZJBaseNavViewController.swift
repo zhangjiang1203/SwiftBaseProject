@@ -22,7 +22,7 @@ class ZJBaseNavViewController: UINavigationController {
         navBar.tintColor = RGBCOLOR_HEX(h: 0x191919)
         navBar.titleTextAttributes = [NSForegroundColorAttributeName:RGBCOLOR_HEX(h: 0x191919),NSFontAttributeName:UIFont.systemFont(ofSize: 18)]
         //设置显示的横线
-        navBar.shadowImage = UIImage()
+//        navBar.shadowImage = UIImage()
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

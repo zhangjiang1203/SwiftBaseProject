@@ -21,7 +21,7 @@ class ZJBookSearchViewController: ZJBaseViewController ,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "图书查询"
         //添加背景图片
         backImageView = UIImageView.init(frame: self.view.bounds)
         backImageView.image = UIImage(named: "locationBGImage")
@@ -34,12 +34,23 @@ class ZJBookSearchViewController: ZJBaseViewController ,UITextFieldDelegate{
         
         searchTextView = UITextField.init()
         searchTextView.frame = CGRect.init(x: 20, y: 50, width: KScreenWidth-40, height: 40)
-        searchTextView.textColor = RGBCOLOR_HEX(h: 0x333333)
+        searchTextView.textColor = RGBCOLOR_HEX(h: 0xffffff)
+        searchTextView.setValue(RGBCOLOR_HEX(h: 0xeeeeee), forKeyPath: "_placeholderLabel.textColor")
         searchTextView.placeholder = "请输入图书名进行查询"
+        
+        let lineView = UIView().then {
+            $0.backgroundColor = RGBCOLOR_HEX(h: 0xefefef)
+            $0.frame = CGRect.init(x: 20, y: 90, width: KScreenWidth-40, height: 0.5)
+        }
+        self.view.addSubview(lineView)
         
         searchBtn = UIButton.init(frame: CGRect.init(x: 20, y: 120, width: KScreenWidth-40, height: 40))
         searchBtn.titleLabel?.font = .systemFont(ofSize: 17)
         searchBtn.setTitle("搜索", for: .normal)
+        searchBtn.backgroundColor = RGBCOLOR_HEX(h: 0x00c866)
+        searchBtn.setTitleColor(RGBCOLOR_HEX(h: 0xffffff), for: .normal)
+        searchBtn.layer.masksToBounds = true
+        searchBtn.layer.cornerRadius = 20
         searchBtn.rx.tap
             .subscribe(onNext: {
                 //开始搜索

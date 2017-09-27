@@ -13,16 +13,56 @@ import RxDataSources
 
 class ZJSecondPageViewController: ZJBaseViewController,UITextFieldDelegate {
 
-    var myTableView:UITableView!
-    
+    var myTableView:UITableView = UITableView().then {
+        $0.showsVerticalScrollIndicator = false
+        $0.showsHorizontalScrollIndicator = false
+        $0.separatorStyle = .none
+        $0.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+    }
+    let dataSources = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>()
+    let disposeBag = DisposeBag()
+    var titleArr:Array<Any>!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItems = nil
-        self.title = "新闻"
+        self.navigationItem.title = "新闻"
+        
+        myTableView.frame = self.view.bounds
+        myTableView.rx.itemSelected.subscribe(onNext: { (indexPath) in
+            self.myTableView.deselectRow(at: indexPath, animated: true)
+            switch (indexPath.row){
+            case 0:
+                let searchVC = ZJBookSearchViewController.init()
+                self.navigationController?.pushViewController(searchVC, animated: true)
+            case 1:
+                let zhihuVC = ZJZhiHuViewController.init()
+                self.navigationController?.pushViewController(zhihuVC, animated: true)
+            default:
+                break
+            }
+        }).addDisposableTo(disposeBag)
+        self.view.addSubview(myTableView)
+    
+        dataSources.configureCell = {
+            _ ,tableview,indexPath,title in
+            let cell = tableview.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+            cell.tag = indexPath.row
+            cell.textLabel?.text = title
+            return cell
+        }
+        //获取数据
+        createItemDataSource()
+            .bind(to: myTableView.rx.items(dataSource: dataSources))
+            .addDisposableTo(disposeBag)
     }
     
-    
-    
+    func createItemDataSource() -> Observable<[SectionModel<String,String>]> {
+        return Observable.create({ (observer) -> Disposable in
+            let section = SectionModel.init(model: "你好", items: ["图书查询","知乎demo"])
+            observer.onNext([section]);
+            observer.onCompleted()
+            return Disposables.create()
+        })
+    }
 }
-
-

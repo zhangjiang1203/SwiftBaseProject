@@ -55,6 +55,7 @@
 		2894F5A91F4C2A5600DC2832 /* ZJShowBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2894F5A71F4C2A5500DC2832 /* ZJShowBookCell.xib */; };
 		2897B49B1F3458C9001FA611 /* ZJRequestTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */; };
 		2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */; };
+		289D34CB1F7B4C1400F3A567 /* ZJZhiHuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D34CA1F7B4C1400F3A567 /* ZJZhiHuViewController.swift */; };
 		28AA28731F7A3BF20075D123 /* ZJBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA286E1F7A3BF20075D123 /* ZJBookDetailViewController.swift */; };
 		28AA28741F7A3BF20075D123 /* ZJBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AA286F1F7A3BF20075D123 /* ZJBookDetailViewController.xib */; };
 		28AA28751F7A3BF20075D123 /* ZJBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA28701F7A3BF20075D123 /* ZJBookListViewController.swift */; };
@@ -146,6 +147,7 @@
 		2894F5A71F4C2A5500DC2832 /* ZJShowBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJShowBookCell.xib; sourceTree = "<group>"; };
 		2897B49A1F3458C9001FA611 /* ZJRequestTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJRequestTestModel.swift; sourceTree = "<group>"; };
 		2897B49E1F346DB9001FA611 /* ZJSegmentScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSegmentScrollView.swift; sourceTree = "<group>"; };
+		289D34CA1F7B4C1400F3A567 /* ZJZhiHuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJZhiHuViewController.swift; sourceTree = "<group>"; };
 		28AA286E1F7A3BF20075D123 /* ZJBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookDetailViewController.swift; sourceTree = "<group>"; };
 		28AA286F1F7A3BF20075D123 /* ZJBookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBookDetailViewController.xib; sourceTree = "<group>"; };
 		28AA28701F7A3BF20075D123 /* ZJBookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJBookListViewController.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 		28AA286C1F7A3BF20075D123 /* ZhihuModel */ = {
 			isa = PBXGroup;
 			children = (
+				289D34CA1F7B4C1400F3A567 /* ZJZhiHuViewController.swift */,
 			);
 			path = ZhihuModel;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				CF7279751F45E31B0093FD00 /* ZJCarouselManager.swift in Sources */,
 				28AA28731F7A3BF20075D123 /* ZJBookDetailViewController.swift in Sources */,
 				281DB1891F3ADC4C0086B13E /* MJRefreshStateHeader.m in Sources */,
+				289D34CB1F7B4C1400F3A567 /* ZJZhiHuViewController.swift in Sources */,
 				281DB1851F3ADC4C0086B13E /* MJRefreshBackNormalFooter.m in Sources */,
 				281DB1821F3ADC4C0086B13E /* MJRefreshAutoNormalFooter.m in Sources */,
 				2897B49F1F346DB9001FA611 /* ZJSegmentScrollView.swift in Sources */,
