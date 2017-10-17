@@ -27,6 +27,13 @@ class ZJSecondPageViewController: ZJBaseViewController,UITextFieldDelegate {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItems = nil
         self.navigationItem.title = "新闻"
+//        数组的遍历
+//        let numArr = [1,2,3,4,5]
+//        Observable.from(numArr)
+//            .map { $0 + 3 }
+//            .subscribe(onNext: { (value) in
+//                print("输出的值== \(value)")
+//            }).disposed(by: disposeBag)
         
         myTableView.frame = self.view.bounds
         myTableView.rx.itemSelected.subscribe(onNext: { (indexPath) in

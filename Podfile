@@ -1,9 +1,7 @@
 platform :ios, '9.0'
 
 target 'SwiftBaseProject' do
-
   use_frameworks!
-  
   pod 'Alamofire', '~> 4.5.0'      #网络请求
   pod 'Kingfisher', '~> 3.10.2'    #网络图片缓存
   pod 'Hero', '~> 0.3.6'           #视图控制器过渡动画的库

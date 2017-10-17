@@ -27,6 +27,7 @@ class ZJFirstPageView: UIView,UITableViewDelegate,UITableViewDataSource {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupMyUIData()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

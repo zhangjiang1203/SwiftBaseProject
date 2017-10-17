@@ -22,7 +22,13 @@ class ZJDetailContentViewController: ZJBaseViewController,WKNavigationDelegate {
             pageURL = "http://www.baidu.com"
         }
         
-        myWebView = WKWebView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: KScreenHight-64))
+        let size = UIScreen.main.bounds.size
+        if size.equalTo(CGSize.init(width:2436, height:  2436)) {
+            myWebView = WKWebView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: KScreenHight-64-34))
+        }else{
+            myWebView = WKWebView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenWidth, height: KScreenHight-64))
+        }
+        
         myWebView.navigationDelegate = self
         myWebView.load(URLRequest.init(url: URL.init(string: pageURL!)!))
         self.view.addSubview(myWebView)
