@@ -18,4 +18,4 @@
 
 模块4中是对微信资讯的一个展示，根据请求的分类进行处理数据，自定义cell显示
 
-![图片显示](http://www.baidu.com)
+![图片显示](https://github.com/zhangjiang1203/SwiftBaseProject/blob/master/SwiftBaseProject/swiftTestDemo.gif)
