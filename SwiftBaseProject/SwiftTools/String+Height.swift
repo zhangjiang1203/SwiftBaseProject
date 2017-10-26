@@ -13,7 +13,7 @@ extension String {
     /// 计算字符串的高度
     ///
     /// - Parameters:
-    ///   - attribute: 字符串属性
+    ///   - attribute: 字符串属性,设置字体大小
     ///   - fixedWidth: 字符串显示的宽度
     /// - Returns: 返回的高度值
     func heightWithStringAttribute(attribute:[String:AnyObject],fixedWidth:CGFloat) -> CGFloat {
@@ -30,7 +30,7 @@ extension String {
     /// 计算字符串宽度
     ///
     /// - Parameters:
-    ///   - attribute: 字符串属性
+    ///   - attribute: 字符串属性 设置字体大小
     ///   - fixedHeight: 字符串显示高度
     /// - Returns: 返回的宽度值
     func widthWithStringAttribute(attribute:[String:AnyObject],fixedHeight:CGFloat) -> CGFloat {
