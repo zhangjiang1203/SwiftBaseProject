@@ -615,7 +615,7 @@
 				TargetAttributes = {
 					2888B1051F2EC1940082E7D0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = N3DR39B4G7;
+						DevelopmentTeam = 4A75LEU8F4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -873,7 +873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = N3DR39B4G7;
+				DEVELOPMENT_TEAM = 4A75LEU8F4;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftBaseProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -892,7 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = N3DR39B4G7;
+				DEVELOPMENT_TEAM = 4A75LEU8F4;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftBaseProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

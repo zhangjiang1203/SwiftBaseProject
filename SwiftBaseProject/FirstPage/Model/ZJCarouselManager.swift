@@ -13,7 +13,7 @@ import HandyJSON
 
 class ZJCarouselManager: NSObject {
 
-    //添加初始值
+    //添加初始值 分页的开始数值都是从1开始
     fileprivate var page0 = 1
     fileprivate var page1 = 1
     fileprivate var page2 = 1
@@ -77,7 +77,7 @@ class ZJCarouselManager: NSObject {
         return pagesArr[index] as! NSInteger
     }
     
-    /// 首次请求数据
+    /// 滚动设置
     ///
     /// - Parameters:
     ///   - index: 第几个

@@ -48,7 +48,7 @@ class ZJForthPageView: UIView,UITableViewDelegate,UITableViewDataSource {
                 self.refreshClouse(true)
             }
         });
-        footerRefresh = MJRefreshBackNormalFooter.init(refreshingBlock: { 
+        footerRefresh = MJRefreshBackNormalFooter.init(refreshingBlock: {
             if self.refreshClouse != nil{
                 self.refreshClouse(false)
             }
